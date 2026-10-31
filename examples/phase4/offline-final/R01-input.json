@@ -1,0 +1,7 @@
+{
+  "id": "R01",
+  "description": "正常预算替代并完成",
+  "overrides": {},
+  "expected_status": "completed",
+  "expected_spent": 8
+}

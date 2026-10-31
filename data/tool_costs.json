@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "synthetic-v1",
+  "rates": [
+    {"operation": "search_materials", "mode_id": "default", "success_cost": 0, "failure_cost": 0, "success_seconds": 5, "failure_seconds": 2},
+    {"operation": "estimate_plan", "mode_id": "default", "success_cost": 0, "failure_cost": 0, "success_seconds": 2, "failure_seconds": 1},
+    {"operation": "save_plan", "mode_id": "default", "success_cost": 0, "failure_cost": 0, "success_seconds": 3, "failure_seconds": 1},
+    {"operation": "generate_script", "mode_id": "economy", "success_cost": 8, "failure_cost": 3, "success_seconds": 120, "failure_seconds": 30},
+    {"operation": "generate_script", "mode_id": "premium", "success_cost": 12, "failure_cost": 4, "success_seconds": 240, "failure_seconds": 60},
+    {"operation": "generate_script", "mode_id": "quick", "success_cost": 9, "failure_cost": 3, "success_seconds": 60, "failure_seconds": 20}
+  ]
+}

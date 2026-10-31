@@ -1,0 +1,150 @@
+{
+  "scenario_id": "T02",
+  "input": {
+    "task_id": "T02",
+    "topic": "介绍字幕编辑功能",
+    "budget_limit": 10,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T10:00:00+08:00"
+  },
+  "scripted_actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    }
+  ],
+  "execution_mode": "scripted_tool_validation_not_agent",
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed"
+    ],
+    "spent_cost": 0,
+    "saved": false,
+    "last_error": "DEPENDENCY_UNMET"
+  },
+  "actual": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed"
+    ],
+    "spent_cost": 0,
+    "saved": false,
+    "logical_time": "2026-10-30T01:00:07Z",
+    "estimate_feasible": [
+      true
+    ],
+    "estimate_totals": [
+      8
+    ],
+    "last_error": "DEPENDENCY_UNMET"
+  },
+  "passed": true,
+  "mismatches": {},
+  "responses": [
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "result_id": "T02:search:2",
+        "operation": "search_materials",
+        "query": "不存在的深海产品",
+        "materials": [],
+        "missing": [
+          "materials"
+        ],
+        "tool_table_version": "synthetic-v1"
+      },
+      "error": null
+    },
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "feasible": true,
+        "gaps": [],
+        "steps": [
+          {
+            "step_id": "generate",
+            "reused": false,
+            "cost": 8,
+            "seconds": 120
+          },
+          {
+            "step_id": "save",
+            "reused": false,
+            "cost": 0,
+            "seconds": 3
+          }
+        ],
+        "remaining_cost_estimate": 8,
+        "projected_total_cost": 8,
+        "estimated_finish_time": "2026-10-30T01:02:12Z",
+        "final_estimate_pending": true,
+        "plan_id": "T02:plan",
+        "plan_version": 1,
+        "estimate_id": "T02:estimate:4",
+        "spent_cost": 0,
+        "reserved_cost": 0
+      },
+      "error": null
+    },
+    {
+      "tool_status": "failed",
+      "result": null,
+      "error": {
+        "code": "DEPENDENCY_UNMET",
+        "message": "No usable materials"
+      }
+    }
+  ],
+  "state": {
+    "task_id": "T02",
+    "spent_cost": 0,
+    "reserved_cost": 0,
+    "logical_time": "2026-10-30T01:00:07Z",
+    "active_plan_version": 1,
+    "attempts": [
+      {
+        "attempt_id": "T02:attempt:1",
+        "operation": "search_materials",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "be60d04db34035f8ba5d2eef6b8836a773dfa2d07aa345deb040fe4a0ca439b6",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null
+      },
+      {
+        "attempt_id": "T02:attempt:3",
+        "operation": "estimate_plan",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "a4c23464657206367dfdae6e701914f9a10ef5c6127680f61fde39da50a7a897",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null
+      }
+    ],
+    "results": {
+      "T02:search:2": {
+        "result_id": "T02:search:2",
+        "operation": "search_materials",
+        "query": "不存在的深海产品",
+        "materials": [],
+        "missing": [
+          "materials"
+        ],
+        "tool_table_version": "synthetic-v1"
+      }
+    }
+  },
+  "saved_plan": null
+}

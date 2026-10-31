@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "execution_mode": "offline_mock",
+  "scenarios": [
+    {"id": "R01", "description": "正常预算替代并完成", "overrides": {}, "expected_status": "completed", "expected_spent": 8},
+    {"id": "R02", "description": "缺预算和截止时间，补齐后执行", "overrides": {"budget_limit": null, "deadline": null}, "complete_input": {"budget_limit": 10, "deadline": "2026-10-30T10:00:00+08:00"}, "expected_status": "completed", "expected_spent": 8},
+    {"id": "R03", "description": "生成失败保留费用和素材", "overrides": {}, "test_failures": {"generate_script": 1}, "expected_status": "partial", "expected_spent": 3},
+    {"id": "R04", "description": "预算无解", "overrides": {"budget_limit": 7}, "expected_status": "partial", "expected_spent": 0},
+    {"id": "R05", "description": "达到动作上限后显式续跑", "overrides": {}, "max_actions": 3, "resume": true, "expected_status": "completed", "expected_spent": 8},
+    {"id": "R06", "description": "重复请求和重复驱动不重复计费", "overrides": {}, "repeat": true, "expected_status": "completed", "expected_spent": 8},
+    {"id": "R07", "description": "没有素材", "overrides": {"topic": "不存在的深海产品"}, "expected_status": "incomplete", "expected_spent": 0},
+    {"id": "R08", "description": "时间约束选择快速模式", "overrides": {"deadline": "2026-10-30T09:01:30+08:00"}, "expected_status": "completed", "expected_spent": 9},
+    {"id": "R09", "description": "保存失败保留脚本后重试", "overrides": {}, "test_failures": {"save_plan": 1}, "expected_status": "completed", "expected_spent": 8},
+    {"id": "R10", "description": "进程在保存事务中退出，重启续跑", "overrides": {}, "crash": "crash_save", "expected_status": "completed", "expected_spent": 8}
+  ]
+}

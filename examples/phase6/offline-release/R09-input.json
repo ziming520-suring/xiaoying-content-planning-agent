@@ -1,0 +1,10 @@
+{
+  "id": "R09",
+  "description": "保存失败保留脚本后重试",
+  "overrides": {},
+  "test_failures": {
+    "save_plan": 1
+  },
+  "expected_status": "completed",
+  "expected_spent": 8
+}

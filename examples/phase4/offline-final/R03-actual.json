@@ -1,0 +1,383 @@
+{
+  "case": "R03",
+  "execution_mode": "offline_mock",
+  "passed": true,
+  "checks": {
+    "expected_status": true,
+    "expected_spent": true,
+    "fresh_reader_same_result": true,
+    "saved_iff_completed": true
+  },
+  "commands": [
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "create",
+        "operation": "task.create",
+        "payload": {
+          "task_id": "R03",
+          "topic": "字幕",
+          "budget_limit": 10,
+          "start_time": "2026-10-30T09:00:00+08:00",
+          "deadline": "2026-10-30T10:00:00+08:00"
+        }
+      },
+      "response": {
+        "schema_version": 1,
+        "request_id": "create",
+        "operation": "task.create",
+        "status": "succeeded",
+        "data": {
+          "task_id": "R03",
+          "task_status": "ready",
+          "stop_reason": null,
+          "missing_fields": [],
+          "active_plan": null,
+          "steps": [],
+          "tool_results": {},
+          "attempts": [],
+          "run_id": null,
+          "budget": {
+            "limit": 10,
+            "spent_cost": 0,
+            "reserved_cost": 0,
+            "remaining_available": 10,
+            "remaining_cost_estimate": null,
+            "projected_total_cost": null
+          },
+          "timing": {
+            "start_time": "2026-10-30T01:00:00Z",
+            "current_time": "2026-10-30T01:00:00Z",
+            "deadline": "2026-10-30T02:00:00Z",
+            "estimated_finish_time": null
+          },
+          "saved_plan": null,
+          "unresolved_attempts": [],
+          "execution_mode": "offline_mock"
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "run",
+        "operation": "task.run",
+        "payload": {
+          "task_id": "R03",
+          "max_actions": 24
+        }
+      },
+      "response": {
+        "schema_version": 1,
+        "request_id": "run",
+        "operation": "task.run",
+        "status": "succeeded",
+        "data": {
+          "task_id": "R03",
+          "run_id": "86946f7a-9e15-46b8-8dbf-662bfbca4dc9"
+        },
+        "error": null
+      }
+    }
+  ],
+  "intermediate": [
+    {
+      "task_id": "R03",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 10,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 10,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    }
+  ],
+  "final": {
+    "task_id": "R03",
+    "task_status": "partial",
+    "stop_reason": "no_feasible_plan",
+    "missing_fields": [],
+    "active_plan": {
+      "plan_id": "R03:plan",
+      "plan_version": 3,
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "R03:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "quick",
+          "step_id": "generate"
+        },
+        {
+          "depends_on": [
+            "generate"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "save"
+        }
+      ],
+      "estimate": {
+        "feasible": false,
+        "gaps": [
+          {
+            "code": "BUDGET_EXCEEDED",
+            "amount": 2
+          }
+        ],
+        "steps": [
+          {
+            "step_id": "generate",
+            "reused": false,
+            "cost": 9,
+            "seconds": 60
+          },
+          {
+            "step_id": "save",
+            "reused": false,
+            "cost": 0,
+            "seconds": 3
+          }
+        ],
+        "remaining_cost_estimate": 9,
+        "projected_total_cost": 12,
+        "estimated_finish_time": "2026-10-30T01:01:46Z",
+        "final_estimate_pending": true
+      }
+    },
+    "steps": [
+      {
+        "depends_on": [],
+        "input_refs": [
+          "R03:search:2"
+        ],
+        "kind": "generate_script",
+        "mode_id": "quick",
+        "step_id": "generate",
+        "status": "pending",
+        "attempt_ids": []
+      },
+      {
+        "depends_on": [
+          "generate"
+        ],
+        "input_refs": [],
+        "kind": "save_plan",
+        "mode_id": "default",
+        "step_id": "save",
+        "status": "blocked",
+        "attempt_ids": []
+      }
+    ],
+    "tool_results": {
+      "R03:search:2": {
+        "materials": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "missing": [],
+        "operation": "search_materials",
+        "query": "字幕",
+        "result_id": "R03:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "R03:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "ef0bdf512c8bc9147e2dcdd45c64bb701b4a06bac24c0e65d57a0b8ab95a9387",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "字幕"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "R03:search:2",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R03:attempt:3",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "dc0fa1115831911c60a9790517db483dc906b3514524657e45c79be1bd08770e",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "R03:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "premium",
+              "step_id": "generate"
+            },
+            {
+              "depends_on": [
+                "generate"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R03:attempt:5",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "6ac53f15a917a49d08e7668e78ed516b308ec3707e2484a6d75d30a7548213c3",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "R03:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "generate"
+            },
+            {
+              "depends_on": [
+                "generate"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R03:attempt:7",
+        "cost_actual": 3,
+        "duration_actual_seconds": 30,
+        "error": {
+          "code": "TOOL_FAILED",
+          "message": "Injected deterministic tool failure"
+        },
+        "input_fingerprint": "efe83ecabb194d23e40b8a2161234f3e553bc00c5e2c5021632c101334f2a35a",
+        "mode_id": "economy",
+        "operation": "generate_script",
+        "payload": {
+          "plan_id": "R03:plan",
+          "step_id": "generate",
+          "version": 2
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "failed"
+      },
+      {
+        "attempt_id": "R03:attempt:8",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "9b5d1d0eea6ccd027101f85607616b3e60d394b5111b62e0f546f49763c7eba7",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "R03:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "quick",
+              "step_id": "generate"
+            },
+            {
+              "depends_on": [
+                "generate"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      }
+    ],
+    "run_id": "86946f7a-9e15-46b8-8dbf-662bfbca4dc9",
+    "budget": {
+      "limit": 10,
+      "spent_cost": 3,
+      "reserved_cost": 0,
+      "remaining_available": 7,
+      "remaining_cost_estimate": 9,
+      "projected_total_cost": 12
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:00:41Z",
+      "deadline": "2026-10-30T02:00:00Z",
+      "estimated_finish_time": "2026-10-30T01:01:46Z"
+    },
+    "saved_plan": null,
+    "unresolved_attempts": [],
+    "execution_mode": "offline_mock"
+  }
+}

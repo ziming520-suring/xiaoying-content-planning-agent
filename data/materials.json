@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "materials": [
+    {"material_id": "M01", "version": "2026-10-30-v1", "title": "字幕编辑功能", "keywords": ["字幕", "编辑", "caption"], "facts": ["支持编辑字幕文字", "支持调整字幕样式"], "source": "合成产品说明 M01"},
+    {"material_id": "M02", "version": "2026-10-30-v1", "title": "视频裁剪功能", "keywords": ["裁剪", "视频", "剪辑"], "facts": ["支持裁剪视频片段", "支持调整片段顺序"], "source": "合成产品说明 M02"},
+    {"material_id": "M03", "version": "2026-10-30-v1", "title": "活动素材整理", "keywords": ["活动", "素材", "整理"], "facts": ["可按主题整理活动素材"], "source": "合成运营说明 M03"},
+    {"material_id": "M04", "version": "2026-10-30-v1", "title": "导出说明", "keywords": ["导出", "成片"], "facts": ["支持导出编辑后的成片"], "source": "合成产品说明 M04"}
+  ]
+}

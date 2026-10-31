@@ -1,0 +1,521 @@
+{
+  "tasks": 18,
+  "tasks_passed": 17,
+  "non_injected_failures": 3,
+  "injected_failures": 4,
+  "scripts_checked": 12,
+  "source_unchanged_since_live": false,
+  "release_source_matches": true,
+  "budget": {
+    "calls": 338,
+    "settled_micro": 723103,
+    "held_micro": 200000,
+    "accounted_micro": 923103,
+    "prompt_tokens": 650272,
+    "completion_tokens": 24277,
+    "limit_micro": 10000000,
+    "accounted_yuan": "0.923103",
+    "remaining_yuan": "9.076897",
+    "estimated_yuan": "0.568772",
+    "notice": "Conservative accounting, not provider bill; unresolved calls retain 0.10 CNY"
+  },
+  "records": [
+    {
+      "group": "round2",
+      "id": "L01",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 4
+    },
+    {
+      "group": "round2",
+      "id": "L02",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "replan_order": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 5
+    },
+    {
+      "group": "round2",
+      "id": "L03",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "replan_order": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 5
+    },
+    {
+      "group": "round2",
+      "id": "L04",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "injected_operation_failed": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 1,
+      "actions": 6
+    },
+    {
+      "group": "round2",
+      "id": "L05",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "incomplete",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 3
+    },
+    {
+      "group": "round2",
+      "id": "L06",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "partial",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 5
+    },
+    {
+      "group": "round2",
+      "id": "L07",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "injected_operation_failed": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 1,
+      "actions": 5
+    },
+    {
+      "group": "round3",
+      "id": "L01",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 1,
+      "injected_failures": 0,
+      "actions": 6
+    },
+    {
+      "group": "round3",
+      "id": "L02",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "replan_order": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 5
+    },
+    {
+      "group": "round3",
+      "id": "L03",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "replan_order": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 5
+    },
+    {
+      "group": "round3",
+      "id": "L04",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "injected_operation_failed": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 1,
+      "actions": 6
+    },
+    {
+      "group": "round3",
+      "id": "L05",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "incomplete",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 4
+    },
+    {
+      "group": "round3",
+      "id": "L06",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "partial",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 5
+    },
+    {
+      "group": "round3",
+      "id": "L07",
+      "passed": false,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "injected_operation_failed": true,
+        "expected_status": false,
+        "online": true
+      },
+      "status": "partial",
+      "non_injected_failures": 2,
+      "injected_failures": 1,
+      "actions": 8
+    },
+    {
+      "group": "perturbations",
+      "id": "P01",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 4
+    },
+    {
+      "group": "perturbations",
+      "id": "P02",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "partial",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 5
+    },
+    {
+      "group": "perturbations",
+      "id": "P03",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "completed",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 4
+    },
+    {
+      "group": "perturbations",
+      "id": "P04",
+      "passed": true,
+      "checks": {
+        "budget": true,
+        "deadline": true,
+        "save_state": true,
+        "expected_status": true,
+        "online": true
+      },
+      "status": "incomplete",
+      "non_injected_failures": 0,
+      "injected_failures": 0,
+      "actions": 4
+    }
+  ],
+  "script_reviews": [
+    {
+      "group": "round2",
+      "id": "L01",
+      "result_id": "L01:script:6",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round2",
+      "id": "L02",
+      "result_id": "L02:script:8",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round2",
+      "id": "L03",
+      "result_id": "L03:script:8",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round2",
+      "id": "L04",
+      "result_id": "L04:script:9",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round2",
+      "id": "L07",
+      "result_id": "L07:script:6",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round3",
+      "id": "L01",
+      "result_id": "L01:script:10",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round3",
+      "id": "L02",
+      "result_id": "L02:script:8",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round3",
+      "id": "L03",
+      "result_id": "L03:script:8",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round3",
+      "id": "L04",
+      "result_id": "L04:script:9",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "round3",
+      "id": "L07",
+      "result_id": "L07:script:10",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "perturbations",
+      "id": "P01",
+      "result_id": "P01:script:6",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n感谢观看。",
+      "source_ids": [
+        "M01"
+      ],
+      "source_sentence_check": true
+    },
+    {
+      "group": "perturbations",
+      "id": "P03",
+      "result_id": "P03:script:6",
+      "title": "功能介绍",
+      "script": "大家好，欢迎观看功能介绍。\n支持编辑字幕文字。\n支持调整字幕样式。\n可按主题整理活动素材。\n感谢观看。",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "source_sentence_check": true
+    }
+  ],
+  "evidence_sha256": {
+    "examples/phase6/live-reviewed/round2/L01-input.json": "4ef2e4c225e3befb784141b50182f28fe731caa5be04289846923677b1770ca2",
+    "examples/phase6/live-reviewed/round2/L01-actual.json": "1af31eef6e4c6dea3f4de2b2efe29774ced4a4916264fd984bb36cab0486739a",
+    "examples/phase6/live-reviewed/round2/L01-trace.jsonl": "6c5cf198a0ac5b5c54d481d55ae6b644b5eeab5a16762c6bed898e698646ccde",
+    "examples/phase6/live-reviewed/round2/L02-input.json": "5c45f510e458c1bb6ed8e079ceece01be716e29026e899d5994fea7b2dea3ead",
+    "examples/phase6/live-reviewed/round2/L02-actual.json": "8355956c77a02e03701cdcc93c8368a61a5306b952340c510efdb842a3c9b577",
+    "examples/phase6/live-reviewed/round2/L02-trace.jsonl": "e85017ad3e696cf2ad553fa88a69e21db304efa3d0c791b58ba2c7c5e6c365b5",
+    "examples/phase6/live-reviewed/round2/L03-input.json": "79c124e024bfc1ba3d3c24ade8c6a753a70cb0746ec9206799d7560f04f372c9",
+    "examples/phase6/live-reviewed/round2/L03-actual.json": "c010f602ce44ee4de5d2de5978e053be9e8b8456ae69b9396740479ee4108744",
+    "examples/phase6/live-reviewed/round2/L03-trace.jsonl": "26952bd8d7e915581131e2ab39feee5350e4659dad0cc49a97a55ef622768c92",
+    "examples/phase6/live-reviewed/round2/L04-input.json": "586efadc513d6ffb52297eead08aa8244df9a504585fac2ddc1c76245e232e5f",
+    "examples/phase6/live-reviewed/round2/L04-actual.json": "a60f3d4ff50c39cbe74d0c5f671a30a981791738ed57065c1c4a9cfa1653ce4c",
+    "examples/phase6/live-reviewed/round2/L04-trace.jsonl": "d49668fff2cf0ed16e4db8cd0e0d56338bcdc1d6fdf0fda7821cb3935bbf5bde",
+    "examples/phase6/live-reviewed/round2/L05-input.json": "20e606c8e13a3401f7ff1ff9059bbad314f1c5b4e0e3d300a45b9168dd37be8a",
+    "examples/phase6/live-reviewed/round2/L05-actual.json": "1309e0e1eeea839446fb08d42dcc34a3f922555e40e15a715445ccc04e766689",
+    "examples/phase6/live-reviewed/round2/L05-trace.jsonl": "08c2907bcb30265d02e36282902d54577631597f849204d80d9f0818a097a000",
+    "examples/phase6/live-reviewed/round2/L06-input.json": "e2e5b58f8aef0dc4b0dd16a8d9ce1ca21b000c0af37a790df94dec0632d301e6",
+    "examples/phase6/live-reviewed/round2/L06-actual.json": "28dfcce52b08b664ecb8fcc15a78890038e0bebc23540725b0b55dc2830edd1b",
+    "examples/phase6/live-reviewed/round2/L06-trace.jsonl": "10260ef473c8bd97c8ef0a7279db05e0db5881bc29d8de9350eb6f8b2e46abbf",
+    "examples/phase6/live-reviewed/round2/L07-input.json": "61b15e73412f0ae596b686a85dc5e5187e5b191a311ca2097529aa07343eef9a",
+    "examples/phase6/live-reviewed/round2/L07-actual.json": "047456daa1359a61464ab6a8288674cb7111dd559ed8fa38f194834c8c634871",
+    "examples/phase6/live-reviewed/round2/L07-trace.jsonl": "aa4014aaa724bde6854a04336ff454f59699279638739ce107563c0dad8bc3ab",
+    "examples/phase6/live-reviewed/round3/L01-input.json": "4ef2e4c225e3befb784141b50182f28fe731caa5be04289846923677b1770ca2",
+    "examples/phase6/live-reviewed/round3/L01-actual.json": "cfb971fb094cb1be758a11588367bf678ccd400e5116464c1822806a8dfc7e16",
+    "examples/phase6/live-reviewed/round3/L01-trace.jsonl": "08620082d8adaeab300372574e385278b1d1833631fa1802df41ff21ddf165af",
+    "examples/phase6/live-reviewed/round3/L02-input.json": "5c45f510e458c1bb6ed8e079ceece01be716e29026e899d5994fea7b2dea3ead",
+    "examples/phase6/live-reviewed/round3/L02-actual.json": "5ca3251cb424a1f85871dcdbc843804db9d1840608a953453b0274b42843243f",
+    "examples/phase6/live-reviewed/round3/L02-trace.jsonl": "1f8275fe20795ed4973ce71b087995bc1e1e87eb11bec166784bf820d2656355",
+    "examples/phase6/live-reviewed/round3/L03-input.json": "79c124e024bfc1ba3d3c24ade8c6a753a70cb0746ec9206799d7560f04f372c9",
+    "examples/phase6/live-reviewed/round3/L03-actual.json": "fd8f3453fc6d3a5ddaff12a3c6365f43647556e4daae2da2415c96040709346c",
+    "examples/phase6/live-reviewed/round3/L03-trace.jsonl": "0c376563c81ad9482f981bf2d0e6a82e1736ab33af5312cd3c4ea1fea2849b18",
+    "examples/phase6/live-reviewed/round3/L04-input.json": "586efadc513d6ffb52297eead08aa8244df9a504585fac2ddc1c76245e232e5f",
+    "examples/phase6/live-reviewed/round3/L04-actual.json": "758e65f0de69896009cf25b2e8549979b4f39b791653d1c8213f0c9a797c9bd5",
+    "examples/phase6/live-reviewed/round3/L04-trace.jsonl": "dafdb52915c68d1a5e825b01914dbe413fd9c6289680d00c00f1a7777de72397",
+    "examples/phase6/live-reviewed/round3/L05-input.json": "20e606c8e13a3401f7ff1ff9059bbad314f1c5b4e0e3d300a45b9168dd37be8a",
+    "examples/phase6/live-reviewed/round3/L05-actual.json": "8266bce2b410d9a32943bef8e38b14e39ca8c5d58a6c99ec23a638353d13f350",
+    "examples/phase6/live-reviewed/round3/L05-trace.jsonl": "045e3e60159ec767e5fa9708d05ef5456f8fd652928a96e982f16929d6d358cf",
+    "examples/phase6/live-reviewed/round3/L06-input.json": "e2e5b58f8aef0dc4b0dd16a8d9ce1ca21b000c0af37a790df94dec0632d301e6",
+    "examples/phase6/live-reviewed/round3/L06-actual.json": "158cbb537a4b93ad34d78978236a4dca829acfdbec6ee9654ddcdcb09a03bbe4",
+    "examples/phase6/live-reviewed/round3/L06-trace.jsonl": "eb8804501fd9b7c1a38efe05b5c36166d97212ad00f1ff9c060974de40d76cf6",
+    "examples/phase6/live-reviewed/round3/L07-input.json": "61b15e73412f0ae596b686a85dc5e5187e5b191a311ca2097529aa07343eef9a",
+    "examples/phase6/live-reviewed/round3/L07-actual.json": "6b82f3259b4a3346474a0e48b9a255b9a996dffdf743bd19ee3554a026968595",
+    "examples/phase6/live-reviewed/round3/L07-trace.jsonl": "48878cc733e2a10b0ee2febdc486f3d4ad6a7f3836eb0de053bfabbd89d6f9f8",
+    "examples/phase6/live-reviewed/perturbations/P01-input.json": "008b33b0bddeff2bd5ef87938bceece52b462f60e5763e1bf3f92233b8b0657e",
+    "examples/phase6/live-reviewed/perturbations/P01-actual.json": "3b74ef1660b0536c2bcc08e0984290e4638491c6514a016fbdb999699fe10ae8",
+    "examples/phase6/live-reviewed/perturbations/P01-trace.jsonl": "fe773f2b4120c05cc19738322278871dd1335ef29f920d63528d5cee81eee77c",
+    "examples/phase6/live-reviewed/perturbations/P02-input.json": "32239ed33566c74d432a0d517b2a049d2885f2bf0e9d05f0601b9426617095df",
+    "examples/phase6/live-reviewed/perturbations/P02-actual.json": "f57330cb9cb08f7eb99bfae49e164b93e6894b4eba1b4e7183b5caf07e707f71",
+    "examples/phase6/live-reviewed/perturbations/P02-trace.jsonl": "6d1f9d9b71d1deb97a7f78daf383b2c2c6419354ce15bcb19cfecc77ef2c9a22",
+    "examples/phase6/live-reviewed/perturbations/P03-input.json": "58b51bb1d896a0448fa30436cd9dead584f505cbcb44e606d058c3319ff4b523",
+    "examples/phase6/live-reviewed/perturbations/P03-actual.json": "c7b6456282cfac1405ee7050c7336fd88ca09807f14bd2617b0858d3d55a8995",
+    "examples/phase6/live-reviewed/perturbations/P03-trace.jsonl": "16a91786d4ec90c861d63b6e260002f0d1cd9d5ff4e7541ef352384af68a6c29",
+    "examples/phase6/live-reviewed/perturbations/P04-input.json": "cfac944aad7ef28c522c6643785d5c3e6e96f39c99dcbc3b6754faa9785213bd",
+    "examples/phase6/live-reviewed/perturbations/P04-actual.json": "cf3fb83630204d90d4b4403b7f6721fd2fc917e3d592fe43fad115c5364ae6bf",
+    "examples/phase6/live-reviewed/perturbations/P04-trace.jsonl": "3ee4f1edfd0a54e52461f2af0c41d243082295a74910977bf377d96915e92475"
+  }
+}

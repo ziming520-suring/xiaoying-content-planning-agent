@@ -1,0 +1,25 @@
+{
+  "id": "T02",
+  "description": "无素材",
+  "task_overrides": {},
+  "query": "不存在的深海产品",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed"
+    ],
+    "spent_cost": 0,
+    "saved": false,
+    "last_error": "DEPENDENCY_UNMET"
+  }
+}

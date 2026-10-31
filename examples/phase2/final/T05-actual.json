@@ -1,0 +1,486 @@
+{
+  "scenario_id": "T05",
+  "input": {
+    "task_id": "T05",
+    "topic": "介绍字幕编辑功能",
+    "budget_limit": 10,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T09:01:30+08:00"
+  },
+  "scripted_actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "estimate",
+      "mode": "quick"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "execution_mode": "scripted_tool_validation_not_agent",
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed",
+      "succeeded",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 9,
+    "saved": true,
+    "estimate_feasible": [
+      false,
+      true
+    ]
+  },
+  "actual": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed",
+      "succeeded",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 9,
+    "saved": true,
+    "logical_time": "2026-10-30T01:01:14Z",
+    "estimate_feasible": [
+      false,
+      true
+    ],
+    "estimate_totals": [
+      8,
+      9
+    ],
+    "last_error": null
+  },
+  "passed": true,
+  "mismatches": {},
+  "responses": [
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "result_id": "T05:search:2",
+        "operation": "search_materials",
+        "query": "字幕",
+        "materials": [
+          {
+            "material_id": "M01",
+            "version": "2026-10-30-v1",
+            "title": "字幕编辑功能",
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "source": "合成产品说明 M01"
+          }
+        ],
+        "missing": [],
+        "tool_table_version": "synthetic-v1"
+      },
+      "error": null
+    },
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "feasible": false,
+        "gaps": [
+          {
+            "code": "DEADLINE_EXCEEDED",
+            "seconds": 42.0
+          }
+        ],
+        "steps": [
+          {
+            "step_id": "generate",
+            "reused": false,
+            "cost": 8,
+            "seconds": 120
+          },
+          {
+            "step_id": "save",
+            "reused": false,
+            "cost": 0,
+            "seconds": 3
+          }
+        ],
+        "remaining_cost_estimate": 8,
+        "projected_total_cost": 8,
+        "estimated_finish_time": "2026-10-30T01:02:12Z",
+        "final_estimate_pending": true,
+        "plan_id": "T05:plan",
+        "plan_version": 1,
+        "estimate_id": "T05:estimate:4",
+        "spent_cost": 0,
+        "reserved_cost": 0
+      },
+      "error": null
+    },
+    {
+      "tool_status": "failed",
+      "result": null,
+      "error": {
+        "code": "DEADLINE_EXCEEDED",
+        "message": "Plan is infeasible"
+      }
+    },
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "feasible": true,
+        "gaps": [],
+        "steps": [
+          {
+            "step_id": "generate",
+            "reused": false,
+            "cost": 9,
+            "seconds": 60
+          },
+          {
+            "step_id": "save",
+            "reused": false,
+            "cost": 0,
+            "seconds": 3
+          }
+        ],
+        "remaining_cost_estimate": 9,
+        "projected_total_cost": 9,
+        "estimated_finish_time": "2026-10-30T01:01:14Z",
+        "final_estimate_pending": true,
+        "plan_id": "T05:plan",
+        "plan_version": 2,
+        "estimate_id": "T05:estimate:6",
+        "spent_cost": 0,
+        "reserved_cost": 0
+      },
+      "error": null
+    },
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "result_id": "T05:script:8",
+        "operation": "generate_script",
+        "generator": "offline_mock",
+        "mode_id": "quick",
+        "title": "介绍字幕编辑功能",
+        "script": "[M01] 支持编辑字幕文字\n[M01] 支持调整字幕样式",
+        "source_ids": [
+          "M01"
+        ],
+        "sources": [
+          {
+            "material_id": "M01",
+            "version": "2026-10-30-v1",
+            "title": "字幕编辑功能",
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "source": "合成产品说明 M01"
+          }
+        ],
+        "tool_table_version": "synthetic-v1"
+      },
+      "error": null
+    },
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "artifact_id": "artifact-e103ecef1d44b5cd811d2e76",
+        "snapshot": {
+          "budget": {
+            "limit": 10,
+            "spent_cost": 9
+          },
+          "execution_mode": "offline_tool_workbench",
+          "plan_version": 2,
+          "scripts": [
+            {
+              "generator": "offline_mock",
+              "mode_id": "quick",
+              "operation": "generate_script",
+              "result_id": "T05:script:8",
+              "script": "[M01] 支持编辑字幕文字\n[M01] 支持调整字幕样式",
+              "source_ids": [
+                "M01"
+              ],
+              "sources": [
+                {
+                  "facts": [
+                    "支持编辑字幕文字",
+                    "支持调整字幕样式"
+                  ],
+                  "keywords": [
+                    "字幕",
+                    "编辑",
+                    "caption"
+                  ],
+                  "material_id": "M01",
+                  "source": "合成产品说明 M01",
+                  "title": "字幕编辑功能",
+                  "version": "2026-10-30-v1"
+                }
+              ],
+              "title": "介绍字幕编辑功能",
+              "tool_table_version": "synthetic-v1"
+            }
+          ],
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "T05:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "quick",
+              "step_id": "generate"
+            },
+            {
+              "depends_on": [
+                "generate"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save"
+            }
+          ],
+          "task_id": "T05",
+          "timing": {
+            "completed_at": "2026-10-30T01:01:14Z",
+            "deadline": "2026-10-30T01:01:30Z"
+          },
+          "tool_table_version": "synthetic-v1",
+          "topic": "介绍字幕编辑功能"
+        }
+      },
+      "error": null
+    }
+  ],
+  "state": {
+    "task_id": "T05",
+    "spent_cost": 9,
+    "reserved_cost": 0,
+    "logical_time": "2026-10-30T01:01:14Z",
+    "active_plan_version": 2,
+    "attempts": [
+      {
+        "attempt_id": "T05:attempt:1",
+        "operation": "search_materials",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "ef0bdf512c8bc9147e2dcdd45c64bb701b4a06bac24c0e65d57a0b8ab95a9387",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null
+      },
+      {
+        "attempt_id": "T05:attempt:3",
+        "operation": "estimate_plan",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "c8cc1d67decd173ae11640601dfc0a34b6af12332606bfce0a16ab658a509d0a",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null
+      },
+      {
+        "attempt_id": "T05:attempt:5",
+        "operation": "estimate_plan",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "25a2fde2e09ccad32d166f903c9f5cd4c2f4ad097a94be39451976fb371cb570",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null
+      },
+      {
+        "attempt_id": "T05:attempt:7",
+        "operation": "generate_script",
+        "mode_id": "quick",
+        "status": "succeeded",
+        "input_fingerprint": "ea7bea52f2ce919bf8d55992a1a597a25163e99e9207c06395c4bfd47795f972",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 9,
+        "duration_actual_seconds": 60,
+        "error": null
+      },
+      {
+        "attempt_id": "T05:attempt:9",
+        "operation": "estimate_plan",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "25a2fde2e09ccad32d166f903c9f5cd4c2f4ad097a94be39451976fb371cb570",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null
+      },
+      {
+        "attempt_id": "T05:attempt:11",
+        "operation": "save_plan",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "958f5825fc54f013452d258daea7105915c8e97818f992272ff6b35dc3014418",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 3,
+        "error": null
+      }
+    ],
+    "results": {
+      "T05:search:2": {
+        "result_id": "T05:search:2",
+        "operation": "search_materials",
+        "query": "字幕",
+        "materials": [
+          {
+            "material_id": "M01",
+            "version": "2026-10-30-v1",
+            "title": "字幕编辑功能",
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "source": "合成产品说明 M01"
+          }
+        ],
+        "missing": [],
+        "tool_table_version": "synthetic-v1"
+      },
+      "T05:script:8": {
+        "result_id": "T05:script:8",
+        "operation": "generate_script",
+        "generator": "offline_mock",
+        "mode_id": "quick",
+        "title": "介绍字幕编辑功能",
+        "script": "[M01] 支持编辑字幕文字\n[M01] 支持调整字幕样式",
+        "source_ids": [
+          "M01"
+        ],
+        "sources": [
+          {
+            "material_id": "M01",
+            "version": "2026-10-30-v1",
+            "title": "字幕编辑功能",
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "source": "合成产品说明 M01"
+          }
+        ],
+        "tool_table_version": "synthetic-v1"
+      }
+    }
+  },
+  "saved_plan": {
+    "artifact_id": "artifact-e103ecef1d44b5cd811d2e76",
+    "snapshot": {
+      "budget": {
+        "limit": 10,
+        "spent_cost": 9
+      },
+      "execution_mode": "offline_tool_workbench",
+      "plan_version": 2,
+      "scripts": [
+        {
+          "generator": "offline_mock",
+          "mode_id": "quick",
+          "operation": "generate_script",
+          "result_id": "T05:script:8",
+          "script": "[M01] 支持编辑字幕文字\n[M01] 支持调整字幕样式",
+          "source_ids": [
+            "M01"
+          ],
+          "sources": [
+            {
+              "facts": [
+                "支持编辑字幕文字",
+                "支持调整字幕样式"
+              ],
+              "keywords": [
+                "字幕",
+                "编辑",
+                "caption"
+              ],
+              "material_id": "M01",
+              "source": "合成产品说明 M01",
+              "title": "字幕编辑功能",
+              "version": "2026-10-30-v1"
+            }
+          ],
+          "title": "介绍字幕编辑功能",
+          "tool_table_version": "synthetic-v1"
+        }
+      ],
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "T05:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "quick",
+          "step_id": "generate"
+        },
+        {
+          "depends_on": [
+            "generate"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "save"
+        }
+      ],
+      "task_id": "T05",
+      "timing": {
+        "completed_at": "2026-10-30T01:01:14Z",
+        "deadline": "2026-10-30T01:01:30Z"
+      },
+      "tool_table_version": "synthetic-v1",
+      "topic": "介绍字幕编辑功能"
+    }
+  }
+}

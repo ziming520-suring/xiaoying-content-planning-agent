@@ -1,0 +1,38 @@
+{
+  "id": "T03",
+  "description": "生成失败后利用已有素材重试",
+  "task_overrides": {
+    "budget_limit": 20
+  },
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "fail_next",
+      "tool": "generate_script"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 11,
+    "saved": true
+  }
+}

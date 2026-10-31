@@ -1,0 +1,13 @@
+{
+  "calls": 88,
+  "settled_micro": 194594,
+  "held_micro": 100000,
+  "accounted_micro": 294594,
+  "prompt_tokens": 175886,
+  "completion_tokens": 6236,
+  "limit_micro": 10000000,
+  "accounted_yuan": "0.294594",
+  "remaining_yuan": "9.705406",
+  "estimated_yuan": "0.153181",
+  "notice": "Conservative accounting, not provider bill; unresolved calls retain 0.10 CNY"
+}

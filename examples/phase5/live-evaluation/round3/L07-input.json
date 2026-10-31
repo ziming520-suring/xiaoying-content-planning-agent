@@ -1,0 +1,12 @@
+{
+  "id": "L07",
+  "description": "保存失败保留在线脚本后重试",
+  "topic": "制作介绍字幕编辑功能的内容活动方案",
+  "budget": 20,
+  "deadline": "2026-10-30T10:00:00+08:00",
+  "test_failures": {
+    "save_plan": 1
+  },
+  "expected_status": "completed",
+  "require_failure": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "T01",
+  "description": "正常生成保存",
+  "task_overrides": {},
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 8,
+    "saved": true
+  }
+}

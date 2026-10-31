@@ -1,0 +1,183 @@
+{
+  "scenario_id": "T06",
+  "input": {
+    "task_id": "T06",
+    "topic": "介绍字幕编辑功能",
+    "budget_limit": 7,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T10:00:00+08:00"
+  },
+  "scripted_actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    }
+  ],
+  "execution_mode": "scripted_tool_validation_not_agent",
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed"
+    ],
+    "spent_cost": 0,
+    "saved": false,
+    "last_error": "BUDGET_EXCEEDED"
+  },
+  "actual": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed"
+    ],
+    "spent_cost": 0,
+    "saved": false,
+    "logical_time": "2026-10-30T01:00:07Z",
+    "estimate_feasible": [
+      false
+    ],
+    "estimate_totals": [
+      8
+    ],
+    "last_error": "BUDGET_EXCEEDED"
+  },
+  "passed": true,
+  "mismatches": {},
+  "responses": [
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "result_id": "T06:search:2",
+        "operation": "search_materials",
+        "query": "字幕",
+        "materials": [
+          {
+            "material_id": "M01",
+            "version": "2026-10-30-v1",
+            "title": "字幕编辑功能",
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "source": "合成产品说明 M01"
+          }
+        ],
+        "missing": [],
+        "tool_table_version": "synthetic-v1"
+      },
+      "error": null
+    },
+    {
+      "tool_status": "succeeded",
+      "result": {
+        "feasible": false,
+        "gaps": [
+          {
+            "code": "BUDGET_EXCEEDED",
+            "amount": 1
+          }
+        ],
+        "steps": [
+          {
+            "step_id": "generate",
+            "reused": false,
+            "cost": 8,
+            "seconds": 120
+          },
+          {
+            "step_id": "save",
+            "reused": false,
+            "cost": 0,
+            "seconds": 3
+          }
+        ],
+        "remaining_cost_estimate": 8,
+        "projected_total_cost": 8,
+        "estimated_finish_time": "2026-10-30T01:02:12Z",
+        "final_estimate_pending": true,
+        "plan_id": "T06:plan",
+        "plan_version": 1,
+        "estimate_id": "T06:estimate:4",
+        "spent_cost": 0,
+        "reserved_cost": 0
+      },
+      "error": null
+    },
+    {
+      "tool_status": "failed",
+      "result": null,
+      "error": {
+        "code": "BUDGET_EXCEEDED",
+        "message": "Plan is infeasible"
+      }
+    }
+  ],
+  "state": {
+    "task_id": "T06",
+    "spent_cost": 0,
+    "reserved_cost": 0,
+    "logical_time": "2026-10-30T01:00:07Z",
+    "active_plan_version": 1,
+    "attempts": [
+      {
+        "attempt_id": "T06:attempt:1",
+        "operation": "search_materials",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "ef0bdf512c8bc9147e2dcdd45c64bb701b4a06bac24c0e65d57a0b8ab95a9387",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null
+      },
+      {
+        "attempt_id": "T06:attempt:3",
+        "operation": "estimate_plan",
+        "mode_id": "default",
+        "status": "succeeded",
+        "input_fingerprint": "140b11a0e9beac5a128198e833b511dfedf7a891c555a9444e5a9d5bd3d894e8",
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null
+      }
+    ],
+    "results": {
+      "T06:search:2": {
+        "result_id": "T06:search:2",
+        "operation": "search_materials",
+        "query": "字幕",
+        "materials": [
+          {
+            "material_id": "M01",
+            "version": "2026-10-30-v1",
+            "title": "字幕编辑功能",
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "source": "合成产品说明 M01"
+          }
+        ],
+        "missing": [],
+        "tool_table_version": "synthetic-v1"
+      }
+    }
+  },
+  "saved_plan": null
+}

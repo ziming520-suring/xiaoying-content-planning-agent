@@ -1,0 +1,62 @@
+{
+  "execution_mode": "scripted_tool_validation_not_agent",
+  "tests_run": 20,
+  "tests_passed": true,
+  "scenario_count": 10,
+  "scenario_passed": 10,
+  "scenarios": [
+    {
+      "id": "T01",
+      "passed": true
+    },
+    {
+      "id": "T02",
+      "passed": true
+    },
+    {
+      "id": "T03",
+      "passed": true
+    },
+    {
+      "id": "T04",
+      "passed": true
+    },
+    {
+      "id": "T05",
+      "passed": true
+    },
+    {
+      "id": "T06",
+      "passed": true
+    },
+    {
+      "id": "T07",
+      "passed": true
+    },
+    {
+      "id": "T08",
+      "passed": true
+    },
+    {
+      "id": "T09",
+      "passed": true
+    },
+    {
+      "id": "T10",
+      "passed": true
+    }
+  ],
+  "source_unchanged": true,
+  "source_sha256": {
+    "data/materials.json": "e536aa02abcab95f8f0f81c516239437a8a0399d69655ed2290b7b172ce4ba17",
+    "data/scenarios.json": "6abc01c338d55e7d0f3771809f9dd7a140fe770edbda092e2d26731ff67734dd",
+    "data/tool_costs.json": "1075d564bd272d5a5b95d11e5a8500f8a59a8d9b7b79be904be9448ebd0e839d",
+    "src/content_planner/__init__.py": "fd917a671bb34ea32d4e38c07a636fbcf772fec2243a6d756a584b45e037884e",
+    "src/content_planner/artifacts.py": "30f7914c42e616256f3f0fb08e10880cc7f2756c8cf3fb5bec492df483ba537f",
+    "src/content_planner/catalog.py": "a80cc3883282861d9971a1d0772162ea2cb925d34ce9842592c9c5b075468615",
+    "src/content_planner/tools.py": "885c2d18de7528f2636266a3e2d57404627f82545a92821a3261a59463c7fb42",
+    "tests/record_phase2.py": "69ddbe75ea7790e5801f965ac8ca4b8ff10fd4a4356c23e03a67e0de4784f9a7",
+    "tests/test_catalog.py": "42454b06aac70cc841c06da5df4fc64cb49163b823985666613ef9fb097552d7",
+    "tests/test_tools.py": "2b881a24f2885019cf3df7a5b4d96c052a6512f9cd7a6958dd347c135bdb478e"
+  }
+}

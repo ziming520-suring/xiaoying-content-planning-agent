@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "example-create",
+  "operation": "task.create",
+  "payload": {
+    "task_id": "EXAMPLE",
+    "topic": "字幕",
+    "budget_limit": 10,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T10:00:00+08:00"
+  }
+}

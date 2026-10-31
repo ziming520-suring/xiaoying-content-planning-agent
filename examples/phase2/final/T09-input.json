@@ -1,0 +1,31 @@
+{
+  "id": "T09",
+  "description": "恰好截止完成",
+  "task_overrides": {
+    "deadline": "2026-10-30T09:02:12+08:00"
+  },
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 8,
+    "saved": true,
+    "logical_time": "2026-10-30T01:02:12Z"
+  }
+}

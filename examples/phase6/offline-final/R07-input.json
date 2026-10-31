@@ -1,0 +1,9 @@
+{
+  "id": "R07",
+  "description": "没有素材",
+  "overrides": {
+    "topic": "不存在的深海产品"
+  },
+  "expected_status": "incomplete",
+  "expected_spent": 0
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "attempt": "live-fixed",
+    "call_key": "e159c365-ac7b-4a57-9909-d3240afffd5f:generation:3",
+    "issue": "script array rejected before normalization fix",
+    "message": {
+      "content": "{\n  \"title\": \"功能介绍\",\n  \"script\": [\n    \"大家好，欢迎观看功能介绍。\",\n    \"支持编辑字幕文字。\",\n    \"支持调整字幕样式。\",\n    \"可按主题整理活动素材。\",\n    \"感谢观看。\"\n  ],\n  \"source_ids\": [\"M01\", \"M03\"]\n}",
+      "role": "assistant"
+    }
+  },
+  {
+    "attempt": "live-final",
+    "call_key": "4eb0550d-d63f-4298-90d0-1beb3c4edf41:decision:2",
+    "issue": "tool arguments missing closing brace",
+    "message": {
+      "content": "",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\"reason\": \"已检索到2个相关素材，现估算含generate_script和save_plan的最小可行计划\", \"steps\": [{\"step_id\": \"S01\", \"kind\": \"generate_script\", \"mode_id\": \"premium\", \"depends_on\": [], \"input_refs\": [\"L01:search:2\"]}, {\"step_id\": \"S02\", \"kind\": \"save_plan\", \"mode_id\": \"default\", \"depends_on\": [\"S01\"], \"input_refs\": []}]",
+            "name": "estimate_plan"
+          },
+          "id": "call_95c9061abd7b424aa84162",
+          "index": 0,
+          "type": "function"
+        }
+      ]
+    }
+  }
+]

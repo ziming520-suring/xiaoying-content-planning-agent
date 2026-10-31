@@ -1,0 +1,9 @@
+{
+  "id": "R05",
+  "description": "达到动作上限后显式续跑",
+  "overrides": {},
+  "max_actions": 3,
+  "resume": true,
+  "expected_status": "completed",
+  "expected_spent": 8
+}

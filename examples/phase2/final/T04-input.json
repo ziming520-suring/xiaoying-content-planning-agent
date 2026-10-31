@@ -1,0 +1,45 @@
+{
+  "id": "T04",
+  "description": "预算10，估算12后替换为8",
+  "task_overrides": {},
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "premium"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed",
+      "succeeded",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 8,
+    "saved": true,
+    "estimate_feasible": [
+      false,
+      true
+    ],
+    "estimate_totals": [
+      12,
+      8
+    ]
+  }
+}

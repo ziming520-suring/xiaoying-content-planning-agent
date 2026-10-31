@@ -1,0 +1,9 @@
+{
+  "id": "R08",
+  "description": "时间约束选择快速模式",
+  "overrides": {
+    "deadline": "2026-10-30T09:01:30+08:00"
+  },
+  "expected_status": "completed",
+  "expected_spent": 9
+}

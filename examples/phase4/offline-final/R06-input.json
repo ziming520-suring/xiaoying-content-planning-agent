@@ -1,0 +1,8 @@
+{
+  "id": "R06",
+  "description": "重复请求和重复驱动不重复计费",
+  "overrides": {},
+  "repeat": true,
+  "expected_status": "completed",
+  "expected_spent": 8
+}

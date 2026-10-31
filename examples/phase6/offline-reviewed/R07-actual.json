@@ -1,0 +1,170 @@
+{
+  "case": "R07",
+  "execution_mode": "offline_mock",
+  "passed": true,
+  "checks": {
+    "expected_status": true,
+    "expected_spent": true,
+    "fresh_reader_same_result": true,
+    "saved_iff_completed": true
+  },
+  "commands": [
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "create",
+        "operation": "task.create",
+        "payload": {
+          "task_id": "R07",
+          "topic": "不存在的深海产品",
+          "budget_limit": 10,
+          "start_time": "2026-10-30T09:00:00+08:00",
+          "deadline": "2026-10-30T10:00:00+08:00"
+        }
+      },
+      "response": {
+        "schema_version": 1,
+        "request_id": "create",
+        "operation": "task.create",
+        "status": "succeeded",
+        "data": {
+          "task_id": "R07",
+          "task_status": "ready",
+          "stop_reason": null,
+          "missing_fields": [],
+          "active_plan": null,
+          "steps": [],
+          "tool_results": {},
+          "attempts": [],
+          "run_id": null,
+          "budget": {
+            "limit": 10,
+            "spent_cost": 0,
+            "reserved_cost": 0,
+            "remaining_available": 10,
+            "remaining_cost_estimate": null,
+            "projected_total_cost": null
+          },
+          "timing": {
+            "start_time": "2026-10-30T01:00:00Z",
+            "current_time": "2026-10-30T01:00:00Z",
+            "deadline": "2026-10-30T02:00:00Z",
+            "estimated_finish_time": null
+          },
+          "saved_plan": null,
+          "unresolved_attempts": [],
+          "execution_mode": "offline_mock"
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "run",
+        "operation": "task.run",
+        "payload": {
+          "task_id": "R07",
+          "max_actions": 24
+        }
+      },
+      "response": {
+        "schema_version": 1,
+        "request_id": "run",
+        "operation": "task.run",
+        "status": "succeeded",
+        "data": {
+          "task_id": "R07",
+          "run_id": "b23e5ca9-8d0f-40fb-af73-09eb42a7e0a7"
+        },
+        "error": null
+      }
+    }
+  ],
+  "intermediate": [
+    {
+      "task_id": "R07",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 10,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 10,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    }
+  ],
+  "final": {
+    "task_id": "R07",
+    "task_status": "incomplete",
+    "stop_reason": "no_material",
+    "missing_fields": [],
+    "active_plan": null,
+    "steps": [],
+    "tool_results": {
+      "R07:search:2": {
+        "materials": [],
+        "missing": [
+          "materials"
+        ],
+        "operation": "search_materials",
+        "query": "不存在的深海产品",
+        "result_id": "R07:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "R07:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "be60d04db34035f8ba5d2eef6b8836a773dfa2d07aa345deb040fe4a0ca439b6",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "不存在的深海产品"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "R07:search:2",
+        "status": "succeeded"
+      }
+    ],
+    "run_id": "b23e5ca9-8d0f-40fb-af73-09eb42a7e0a7",
+    "budget": {
+      "limit": 10,
+      "spent_cost": 0,
+      "reserved_cost": 0,
+      "remaining_available": 10,
+      "remaining_cost_estimate": null,
+      "projected_total_cost": null
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:00:05Z",
+      "deadline": "2026-10-30T02:00:00Z",
+      "estimated_finish_time": null
+    },
+    "saved_plan": null,
+    "unresolved_attempts": [],
+    "execution_mode": "offline_mock"
+  }
+}

@@ -1,0 +1,1 @@
+# Python >= 3.12. Phase 2 uses the standard library only.

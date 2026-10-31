@@ -1,0 +1,42 @@
+{
+  "id": "T08",
+  "description": "失败消耗3后不能再执行8单位方案",
+  "task_overrides": {},
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "fail_next",
+      "tool": "generate_script"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed",
+      "succeeded",
+      "failed"
+    ],
+    "spent_cost": 3,
+    "saved": false,
+    "estimate_totals": [
+      8,
+      11
+    ],
+    "last_error": "BUDGET_EXCEEDED"
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "case": "L06",
+  "execution_mode": "bailian_live",
+  "passed": true,
+  "checks": {
+    "status": true,
+    "budget": true,
+    "online_scripts": true,
+    "saved_iff_completed": true
+  },
+  "input": {
+    "task_id": "L06",
+    "topic": "制作介绍字幕编辑功能的内容活动方案",
+    "budget_limit": 7,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T10:00:00+08:00"
+  },
+  "create_response": {
+    "schema_version": 1,
+    "request_id": "create",
+    "operation": "task.create",
+    "status": "succeeded",
+    "data": {
+      "task_id": "L06",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 7,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 7,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    },
+    "error": null
+  },
+  "run_response": {
+    "schema_version": 1,
+    "request_id": "run",
+    "operation": "task.run",
+    "status": "succeeded",
+    "data": {
+      "task_id": "L06",
+      "run_id": "0c73a6c4-460b-4038-9bb7-64ebeef18c51"
+    },
+    "error": null
+  },
+  "final": {
+    "task_id": "L06",
+    "task_status": "partial",
+    "stop_reason": "NO_FEASIBLE_PLAN",
+    "missing_fields": [],
+    "active_plan": {
+      "plan_id": "L06:plan",
+      "plan_version": 2,
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "L06:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "quick",
+          "step_id": "S1"
+        },
+        {
+          "depends_on": [
+            "S1"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "S2"
+        }
+      ],
+      "estimate": {
+        "feasible": false,
+        "gaps": [
+          {
+            "code": "BUDGET_EXCEEDED",
+            "amount": 2
+          }
+        ],
+        "steps": [
+          {
+            "step_id": "S1",
+            "reused": false,
+            "cost": 9,
+            "seconds": 60
+          },
+          {
+            "step_id": "S2",
+            "reused": false,
+            "cost": 0,
+            "seconds": 3
+          }
+        ],
+        "remaining_cost_estimate": 9,
+        "projected_total_cost": 9,
+        "estimated_finish_time": "2026-10-30T01:01:14Z",
+        "final_estimate_pending": true
+      }
+    },
+    "steps": [
+      {
+        "depends_on": [],
+        "input_refs": [
+          "L06:search:2"
+        ],
+        "kind": "generate_script",
+        "mode_id": "quick",
+        "step_id": "S1",
+        "status": "pending",
+        "attempt_ids": []
+      },
+      {
+        "depends_on": [
+          "S1"
+        ],
+        "input_refs": [],
+        "kind": "save_plan",
+        "mode_id": "default",
+        "step_id": "S2",
+        "status": "blocked",
+        "attempt_ids": []
+      }
+    ],
+    "tool_results": {
+      "L06:search:2": {
+        "materials": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          },
+          {
+            "facts": [
+              "可按主题整理活动素材"
+            ],
+            "keywords": [
+              "活动",
+              "素材",
+              "整理"
+            ],
+            "material_id": "M03",
+            "source": "合成运营说明 M03",
+            "title": "活动素材整理",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "missing": [],
+        "operation": "search_materials",
+        "query": "字幕编辑功能介绍 活动方案",
+        "result_id": "L06:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "L06:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "ce7c46a3b25a958e5bc07d9c96d5c2a38b2c217924848312b7b79da6733118ca",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "字幕编辑功能介绍 活动方案"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "L06:search:2",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "L06:attempt:3",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "70239dac0f1e06df47a952dc34f8c3167ae9f719d2bef0ef6e0dcb70bbd36418",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "L06:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "S1"
+            },
+            {
+              "depends_on": [
+                "S1"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "S2"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "L06:attempt:5",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "2f76e083913c0f120967d0fcecf5aa522dc6f519f5a2b28f529093295d75f537",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "L06:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "quick",
+              "step_id": "S1"
+            },
+            {
+              "depends_on": [
+                "S1"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "S2"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      }
+    ],
+    "run_id": "0c73a6c4-460b-4038-9bb7-64ebeef18c51",
+    "budget": {
+      "limit": 7,
+      "spent_cost": 0,
+      "reserved_cost": 0,
+      "remaining_available": 7,
+      "remaining_cost_estimate": 9,
+      "projected_total_cost": 9
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:00:09Z",
+      "deadline": "2026-10-30T02:00:00Z",
+      "estimated_finish_time": "2026-10-30T01:01:14Z"
+    },
+    "saved_plan": null,
+    "unresolved_attempts": [],
+    "execution_mode": "bailian_live"
+  },
+  "failed_action_count": 0,
+  "estimates": [
+    {
+      "version": 1,
+      "feasible": false,
+      "total": 8
+    },
+    {
+      "version": 2,
+      "feasible": false,
+      "total": 9
+    }
+  ]
+}

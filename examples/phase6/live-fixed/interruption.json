@@ -1,0 +1,628 @@
+{
+  "reason": "Stopped after repeated provider script-array schema errors; no failed records removed.",
+  "unfinished": {
+    "round2-L06.sqlite3": {
+      "status": {
+        "task_id": "L06",
+        "task_status": "running",
+        "stop_reason": null,
+        "missing_fields": [],
+        "active_plan": {
+          "plan_id": "L06:plan",
+          "plan_version": 2,
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "L06:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "gen1"
+            },
+            {
+              "depends_on": [
+                "gen1"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save1"
+            }
+          ],
+          "estimate": {
+            "feasible": false,
+            "gaps": [
+              {
+                "code": "BUDGET_EXCEEDED",
+                "amount": 1
+              }
+            ],
+            "steps": [
+              {
+                "step_id": "gen1",
+                "reused": false,
+                "cost": 8,
+                "seconds": 120
+              },
+              {
+                "step_id": "save1",
+                "reused": false,
+                "cost": 0,
+                "seconds": 3
+              }
+            ],
+            "remaining_cost_estimate": 8,
+            "projected_total_cost": 8,
+            "estimated_finish_time": "2026-10-30T01:02:14Z",
+            "final_estimate_pending": true
+          }
+        },
+        "steps": [
+          {
+            "depends_on": [],
+            "input_refs": [
+              "L06:search:2"
+            ],
+            "kind": "generate_script",
+            "mode_id": "economy",
+            "step_id": "gen1",
+            "status": "pending",
+            "attempt_ids": []
+          },
+          {
+            "depends_on": [
+              "gen1"
+            ],
+            "input_refs": [],
+            "kind": "save_plan",
+            "mode_id": "default",
+            "step_id": "save1",
+            "status": "blocked",
+            "attempt_ids": []
+          }
+        ],
+        "tool_results": {
+          "L06:search:2": {
+            "materials": [
+              {
+                "facts": [
+                  "支持编辑字幕文字",
+                  "支持调整字幕样式"
+                ],
+                "keywords": [
+                  "字幕",
+                  "编辑",
+                  "caption"
+                ],
+                "material_id": "M01",
+                "source": "合成产品说明 M01",
+                "title": "字幕编辑功能",
+                "version": "2026-10-30-v1"
+              },
+              {
+                "facts": [
+                  "可按主题整理活动素材"
+                ],
+                "keywords": [
+                  "活动",
+                  "素材",
+                  "整理"
+                ],
+                "material_id": "M03",
+                "source": "合成运营说明 M03",
+                "title": "活动素材整理",
+                "version": "2026-10-30-v1"
+              }
+            ],
+            "missing": [],
+            "operation": "search_materials",
+            "query": "字幕编辑功能介绍 活动方案 素材",
+            "result_id": "L06:search:2",
+            "tool_table_version": "synthetic-v1"
+          }
+        },
+        "attempts": [
+          {
+            "attempt_id": "L06:attempt:1",
+            "cost_actual": 0,
+            "duration_actual_seconds": 5,
+            "error": null,
+            "input_fingerprint": "f822ea3f9f31b67133c9adfbedcfa5137724cc0738d59b0b5a76b3d972c98571",
+            "mode_id": "default",
+            "operation": "search_materials",
+            "payload": {
+              "query": "字幕编辑功能介绍 活动方案 素材"
+            },
+            "reserved_cost": 0,
+            "reserved_seconds": 0,
+            "result_id": "L06:search:2",
+            "status": "succeeded"
+          },
+          {
+            "attempt_id": "L06:attempt:3",
+            "cost_actual": 0,
+            "duration_actual_seconds": 2,
+            "error": null,
+            "input_fingerprint": "c41bc26db6a4d930f61cc54a5d88ad89461284505a2d948b23b0011de941aae3",
+            "mode_id": "default",
+            "operation": "estimate_plan",
+            "payload": {
+              "steps": [
+                {
+                  "depends_on": [],
+                  "input_refs": [
+                    "L06:search:2"
+                  ],
+                  "kind": "generate_script",
+                  "mode_id": "premium",
+                  "step_id": "gen1"
+                },
+                {
+                  "depends_on": [
+                    "gen1"
+                  ],
+                  "input_refs": [],
+                  "kind": "save_plan",
+                  "mode_id": "default",
+                  "step_id": "save1"
+                }
+              ]
+            },
+            "reserved_cost": 0,
+            "reserved_seconds": 0,
+            "result_id": null,
+            "status": "succeeded"
+          },
+          {
+            "attempt_id": "L06:attempt:5",
+            "cost_actual": 0,
+            "duration_actual_seconds": 2,
+            "error": null,
+            "input_fingerprint": "bbda4d52511b8cf316b873757465411a429b42e2aacd5408c8d397da83469133",
+            "mode_id": "default",
+            "operation": "estimate_plan",
+            "payload": {
+              "steps": [
+                {
+                  "depends_on": [],
+                  "input_refs": [
+                    "L06:search:2"
+                  ],
+                  "kind": "generate_script",
+                  "mode_id": "economy",
+                  "step_id": "gen1"
+                },
+                {
+                  "depends_on": [
+                    "gen1"
+                  ],
+                  "input_refs": [],
+                  "kind": "save_plan",
+                  "mode_id": "default",
+                  "step_id": "save1"
+                }
+              ]
+            },
+            "reserved_cost": 0,
+            "reserved_seconds": 0,
+            "result_id": null,
+            "status": "succeeded"
+          }
+        ],
+        "run_id": "ce5a79bb-4e3f-4f76-ad1d-211a164d444b",
+        "budget": {
+          "limit": 7,
+          "spent_cost": 0,
+          "reserved_cost": 0,
+          "remaining_available": 7,
+          "remaining_cost_estimate": 8,
+          "projected_total_cost": 8
+        },
+        "timing": {
+          "start_time": "2026-10-30T01:00:00Z",
+          "current_time": "2026-10-30T01:00:09Z",
+          "deadline": "2026-10-30T02:00:00Z",
+          "estimated_finish_time": "2026-10-30T01:02:14Z"
+        },
+        "saved_plan": null,
+        "unresolved_attempts": [],
+        "execution_mode": "bailian_live"
+      },
+      "trace": [
+        {
+          "action": {
+            "arguments": {
+              "query": "字幕编辑功能介绍 活动方案 素材"
+            },
+            "reason": "当前无可用素材，需先检索实际素材支撑后续计划",
+            "tool": "search_materials"
+          },
+          "execution_mode": "bailian_live",
+          "logical_time": "2026-10-30T01:00:05Z",
+          "observation": {
+            "error": null,
+            "result": {
+              "materials": [
+                {
+                  "facts": [
+                    "支持编辑字幕文字",
+                    "支持调整字幕样式"
+                  ],
+                  "keywords": [
+                    "字幕",
+                    "编辑",
+                    "caption"
+                  ],
+                  "material_id": "M01",
+                  "source": "合成产品说明 M01",
+                  "title": "字幕编辑功能",
+                  "version": "2026-10-30-v1"
+                },
+                {
+                  "facts": [
+                    "可按主题整理活动素材"
+                  ],
+                  "keywords": [
+                    "活动",
+                    "素材",
+                    "整理"
+                  ],
+                  "material_id": "M03",
+                  "source": "合成运营说明 M03",
+                  "title": "活动素材整理",
+                  "version": "2026-10-30-v1"
+                }
+              ],
+              "missing": [],
+              "operation": "search_materials",
+              "query": "字幕编辑功能介绍 活动方案 素材",
+              "result_id": "L06:search:2",
+              "tool_table_version": "synthetic-v1"
+            },
+            "tool_status": "succeeded"
+          },
+          "run_id": "ce5a79bb-4e3f-4f76-ad1d-211a164d444b",
+          "sequence": 1,
+          "spent_cost": 0,
+          "task_id": "L06",
+          "tool_observations": [
+            {
+              "logical_time": "2026-10-30T01:00:05Z",
+              "params": {
+                "query": "字幕编辑功能介绍 活动方案 素材"
+              },
+              "response": {
+                "error": null,
+                "result": {
+                  "materials": [
+                    {
+                      "facts": [
+                        "支持编辑字幕文字",
+                        "支持调整字幕样式"
+                      ],
+                      "keywords": [
+                        "字幕",
+                        "编辑",
+                        "caption"
+                      ],
+                      "material_id": "M01",
+                      "source": "合成产品说明 M01",
+                      "title": "字幕编辑功能",
+                      "version": "2026-10-30-v1"
+                    },
+                    {
+                      "facts": [
+                        "可按主题整理活动素材"
+                      ],
+                      "keywords": [
+                        "活动",
+                        "素材",
+                        "整理"
+                      ],
+                      "material_id": "M03",
+                      "source": "合成运营说明 M03",
+                      "title": "活动素材整理",
+                      "version": "2026-10-30-v1"
+                    }
+                  ],
+                  "missing": [],
+                  "operation": "search_materials",
+                  "query": "字幕编辑功能介绍 活动方案 素材",
+                  "result_id": "L06:search:2",
+                  "tool_table_version": "synthetic-v1"
+                },
+                "tool_status": "succeeded"
+              },
+              "spent_cost": 0,
+              "tool": "search_materials"
+            }
+          ]
+        },
+        {
+          "action": {
+            "arguments": {
+              "steps": [
+                {
+                  "depends_on": [],
+                  "input_refs": [
+                    "L06:search:2"
+                  ],
+                  "kind": "generate_script",
+                  "mode_id": "premium",
+                  "step_id": "gen1"
+                },
+                {
+                  "depends_on": [
+                    "gen1"
+                  ],
+                  "input_refs": [],
+                  "kind": "save_plan",
+                  "mode_id": "default",
+                  "step_id": "save1"
+                }
+              ]
+            },
+            "reason": "已检索到素材L06:search:2，需估算含generate_script和save_plan的完整计划",
+            "tool": "estimate_plan"
+          },
+          "execution_mode": "bailian_live",
+          "logical_time": "2026-10-30T01:00:07Z",
+          "observation": {
+            "error": null,
+            "result": {
+              "estimate_id": "L06:estimate:4",
+              "estimated_finish_time": "2026-10-30T01:04:12Z",
+              "feasible": false,
+              "final_estimate_pending": true,
+              "gaps": [
+                {
+                  "amount": 5,
+                  "code": "BUDGET_EXCEEDED"
+                }
+              ],
+              "plan_id": "L06:plan",
+              "plan_version": 1,
+              "projected_total_cost": 12,
+              "remaining_cost_estimate": 12,
+              "reserved_cost": 0,
+              "spent_cost": 0,
+              "steps": [
+                {
+                  "cost": 12,
+                  "reused": false,
+                  "seconds": 240,
+                  "step_id": "gen1"
+                },
+                {
+                  "cost": 0,
+                  "reused": false,
+                  "seconds": 3,
+                  "step_id": "save1"
+                }
+              ]
+            },
+            "tool_status": "succeeded"
+          },
+          "run_id": "ce5a79bb-4e3f-4f76-ad1d-211a164d444b",
+          "sequence": 2,
+          "spent_cost": 0,
+          "task_id": "L06",
+          "tool_observations": [
+            {
+              "logical_time": "2026-10-30T01:00:07Z",
+              "params": {
+                "steps": [
+                  {
+                    "depends_on": [],
+                    "input_refs": [
+                      "L06:search:2"
+                    ],
+                    "kind": "generate_script",
+                    "mode_id": "premium",
+                    "step_id": "gen1"
+                  },
+                  {
+                    "depends_on": [
+                      "gen1"
+                    ],
+                    "input_refs": [],
+                    "kind": "save_plan",
+                    "mode_id": "default",
+                    "step_id": "save1"
+                  }
+                ]
+              },
+              "response": {
+                "error": null,
+                "result": {
+                  "estimate_id": "L06:estimate:4",
+                  "estimated_finish_time": "2026-10-30T01:04:12Z",
+                  "feasible": false,
+                  "final_estimate_pending": true,
+                  "gaps": [
+                    {
+                      "amount": 5,
+                      "code": "BUDGET_EXCEEDED"
+                    }
+                  ],
+                  "plan_id": "L06:plan",
+                  "plan_version": 1,
+                  "projected_total_cost": 12,
+                  "remaining_cost_estimate": 12,
+                  "reserved_cost": 0,
+                  "spent_cost": 0,
+                  "steps": [
+                    {
+                      "cost": 12,
+                      "reused": false,
+                      "seconds": 240,
+                      "step_id": "gen1"
+                    },
+                    {
+                      "cost": 0,
+                      "reused": false,
+                      "seconds": 3,
+                      "step_id": "save1"
+                    }
+                  ]
+                },
+                "tool_status": "succeeded"
+              },
+              "spent_cost": 0,
+              "tool": "estimate_plan"
+            }
+          ]
+        },
+        {
+          "action": {
+            "arguments": {
+              "steps": [
+                {
+                  "depends_on": [],
+                  "input_refs": [
+                    "L06:search:2"
+                  ],
+                  "kind": "generate_script",
+                  "mode_id": "economy",
+                  "step_id": "gen1"
+                },
+                {
+                  "depends_on": [
+                    "gen1"
+                  ],
+                  "input_refs": [],
+                  "kind": "save_plan",
+                  "mode_id": "default",
+                  "step_id": "save1"
+                }
+              ]
+            },
+            "reason": "premium模式超预算，改用economy模式重估",
+            "tool": "estimate_plan"
+          },
+          "execution_mode": "bailian_live",
+          "logical_time": "2026-10-30T01:00:09Z",
+          "observation": {
+            "error": null,
+            "result": {
+              "estimate_id": "L06:estimate:6",
+              "estimated_finish_time": "2026-10-30T01:02:14Z",
+              "feasible": false,
+              "final_estimate_pending": true,
+              "gaps": [
+                {
+                  "amount": 1,
+                  "code": "BUDGET_EXCEEDED"
+                }
+              ],
+              "plan_id": "L06:plan",
+              "plan_version": 2,
+              "projected_total_cost": 8,
+              "remaining_cost_estimate": 8,
+              "reserved_cost": 0,
+              "spent_cost": 0,
+              "steps": [
+                {
+                  "cost": 8,
+                  "reused": false,
+                  "seconds": 120,
+                  "step_id": "gen1"
+                },
+                {
+                  "cost": 0,
+                  "reused": false,
+                  "seconds": 3,
+                  "step_id": "save1"
+                }
+              ]
+            },
+            "tool_status": "succeeded"
+          },
+          "run_id": "ce5a79bb-4e3f-4f76-ad1d-211a164d444b",
+          "sequence": 3,
+          "spent_cost": 0,
+          "task_id": "L06",
+          "tool_observations": [
+            {
+              "logical_time": "2026-10-30T01:00:09Z",
+              "params": {
+                "steps": [
+                  {
+                    "depends_on": [],
+                    "input_refs": [
+                      "L06:search:2"
+                    ],
+                    "kind": "generate_script",
+                    "mode_id": "economy",
+                    "step_id": "gen1"
+                  },
+                  {
+                    "depends_on": [
+                      "gen1"
+                    ],
+                    "input_refs": [],
+                    "kind": "save_plan",
+                    "mode_id": "default",
+                    "step_id": "save1"
+                  }
+                ]
+              },
+              "response": {
+                "error": null,
+                "result": {
+                  "estimate_id": "L06:estimate:6",
+                  "estimated_finish_time": "2026-10-30T01:02:14Z",
+                  "feasible": false,
+                  "final_estimate_pending": true,
+                  "gaps": [
+                    {
+                      "amount": 1,
+                      "code": "BUDGET_EXCEEDED"
+                    }
+                  ],
+                  "plan_id": "L06:plan",
+                  "plan_version": 2,
+                  "projected_total_cost": 8,
+                  "remaining_cost_estimate": 8,
+                  "reserved_cost": 0,
+                  "spent_cost": 0,
+                  "steps": [
+                    {
+                      "cost": 8,
+                      "reused": false,
+                      "seconds": 120,
+                      "step_id": "gen1"
+                    },
+                    {
+                      "cost": 0,
+                      "reused": false,
+                      "seconds": 3,
+                      "step_id": "save1"
+                    }
+                  ]
+                },
+                "tool_status": "succeeded"
+              },
+              "spent_cost": 0,
+              "tool": "estimate_plan"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "budget_at_stop": {
+    "calls": 228,
+    "settled_micro": 497873,
+    "held_micro": 200000,
+    "accounted_micro": 697873,
+    "prompt_tokens": 447845,
+    "completion_tokens": 16676,
+    "limit_micro": 10000000,
+    "accounted_yuan": "0.697873",
+    "remaining_yuan": "9.302127",
+    "estimated_yuan": "0.391628",
+    "notice": "Conservative accounting, not provider bill; unresolved calls retain 0.10 CNY"
+  }
+}

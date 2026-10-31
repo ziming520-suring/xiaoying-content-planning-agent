@@ -1,0 +1,10 @@
+--- executed/bailian.py
++++ release/bailian.py
+@@ -146,6 +146,7 @@
+             calls=result['choices'][0]['message']['tool_calls']
+             require(len(calls)==1,'Expected one tool call','MODEL_PROTOCOL_ERROR')
+             function=calls[0]['function'];args=parse_request(function['arguments'])
++            require(isinstance(args,dict),'Tool arguments must be an object','MODEL_PROTOCOL_ERROR')
+             require(function['name'] in {t['function']['name'] for t in available},'Tool unavailable for observed state','MODEL_PROTOCOL_ERROR')
+             reason=args.pop('reason');string(reason,'reason',1000)
+             return {'tool':function['name'],'arguments':args,'reason':reason}

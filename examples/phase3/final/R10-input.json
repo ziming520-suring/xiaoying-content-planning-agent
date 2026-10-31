@@ -1,0 +1,8 @@
+{
+  "id": "R10",
+  "description": "进程在保存事务中退出，重启续跑",
+  "overrides": {},
+  "crash": "crash_save",
+  "expected_status": "completed",
+  "expected_spent": 8
+}

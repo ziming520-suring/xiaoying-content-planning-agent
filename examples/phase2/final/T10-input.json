@@ -1,0 +1,37 @@
+{
+  "id": "T10",
+  "description": "同工作台重复生成和保存",
+  "task_overrides": {},
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "save"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "succeeded",
+      "succeeded",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 8,
+    "saved": true,
+    "logical_time": "2026-10-30T01:02:12Z"
+  }
+}

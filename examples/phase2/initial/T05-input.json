@@ -1,0 +1,43 @@
+{
+  "id": "T05",
+  "description": "截止时间不足，改为快速模式",
+  "task_overrides": {
+    "deadline": "2026-10-30T09:01:30+08:00"
+  },
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "estimate",
+      "mode": "quick"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed",
+      "succeeded",
+      "succeeded",
+      "succeeded"
+    ],
+    "spent_cost": 9,
+    "saved": true,
+    "estimate_feasible": [
+      false,
+      true
+    ]
+  }
+}

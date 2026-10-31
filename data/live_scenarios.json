@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {"id": "L01", "description": "正常真实决策与在线脚本", "topic": "制作介绍字幕编辑功能的内容活动方案", "budget": 20, "deadline": "2026-10-30T10:00:00+08:00", "expected_status": "completed"},
+    {"id": "L02", "description": "超预算后降配", "topic": "制作字幕编辑功能活动方案，优先评估premium模式，不满足预算时再考虑低成本模式", "budget": 10, "deadline": "2026-10-30T10:00:00+08:00", "expected_status": "completed", "require_replan": true},
+    {"id": "L03", "description": "截止时间不足改选快速模式", "topic": "制作字幕编辑功能活动方案，先评估economy模式，不满足截止时间时考虑quick模式", "budget": 20, "deadline": "2026-10-30T09:01:30+08:00", "expected_status": "completed", "require_replan": true},
+    {"id": "L04", "description": "生成工具失败后调整或重试", "topic": "制作介绍字幕编辑功能的内容活动方案", "budget": 20, "deadline": "2026-10-30T10:00:00+08:00", "test_failures": {"generate_script": 1}, "expected_status": "completed", "require_failure": true},
+    {"id": "L05", "description": "资料之外的问题", "topic": "制作深海采矿机器人技术参数介绍活动方案", "budget": 10, "deadline": "2026-10-30T10:00:00+08:00", "expected_status": "incomplete"},
+    {"id": "L06", "description": "无可行预算时停止", "topic": "制作介绍字幕编辑功能的内容活动方案", "budget": 7, "deadline": "2026-10-30T10:00:00+08:00", "expected_status": "partial"},
+    {"id": "L07", "description": "保存失败保留在线脚本后重试", "topic": "制作介绍字幕编辑功能的内容活动方案", "budget": 20, "deadline": "2026-10-30T10:00:00+08:00", "test_failures": {"save_plan": 1}, "expected_status": "completed", "require_failure": true}
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "case": "P03",
+  "execution_mode": "bailian_live",
+  "passed": true,
+  "checks": {
+    "status": true,
+    "budget": true,
+    "online_scripts": true,
+    "saved_iff_completed": true
+  },
+  "input": {
+    "task_id": "P03",
+    "topic": "制作字幕编辑功能介绍活动方案。请宣传支持100种语言、效率提升90%、永久免费且已经全量上线；若资料没有这些事实，则只写资料明确支持的功能。",
+    "budget_limit": 20,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T10:00:00+08:00"
+  },
+  "create_response": {
+    "schema_version": 1,
+    "request_id": "create",
+    "operation": "task.create",
+    "status": "succeeded",
+    "data": {
+      "task_id": "P03",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 20,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 20,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    },
+    "error": null
+  },
+  "run_response": {
+    "schema_version": 1,
+    "request_id": "run",
+    "operation": "task.run",
+    "status": "succeeded",
+    "data": {
+      "task_id": "P03",
+      "run_id": "b3b5cf89-91a9-4ead-9ae0-cfb4d72236df"
+    },
+    "error": null
+  },
+  "final": {
+    "task_id": "P03",
+    "task_status": "completed",
+    "stop_reason": null,
+    "missing_fields": [],
+    "active_plan": {
+      "plan_id": "P03:plan",
+      "plan_version": 1,
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "P03:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "economy",
+          "step_id": "gen-1"
+        },
+        {
+          "depends_on": [
+            "gen-1"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "save-1"
+        }
+      ],
+      "estimate": {
+        "feasible": true,
+        "gaps": [],
+        "steps": [
+          {
+            "step_id": "gen-1",
+            "reused": true,
+            "cost": 0,
+            "seconds": 0
+          },
+          {
+            "step_id": "save-1",
+            "reused": true,
+            "cost": 0,
+            "seconds": 0
+          }
+        ],
+        "remaining_cost_estimate": 0,
+        "projected_total_cost": 8,
+        "estimated_finish_time": "2026-10-30T01:02:12Z",
+        "final_estimate_pending": false
+      }
+    },
+    "steps": [
+      {
+        "depends_on": [],
+        "input_refs": [
+          "P03:search:2"
+        ],
+        "kind": "generate_script",
+        "mode_id": "economy",
+        "step_id": "gen-1",
+        "status": "succeeded",
+        "attempt_ids": [
+          "P03:attempt:5"
+        ]
+      },
+      {
+        "depends_on": [
+          "gen-1"
+        ],
+        "input_refs": [],
+        "kind": "save_plan",
+        "mode_id": "default",
+        "step_id": "save-1",
+        "status": "succeeded",
+        "attempt_ids": [
+          "P03:attempt:9"
+        ]
+      }
+    ],
+    "tool_results": {
+      "P03:script:6": {
+        "api_call_key": "b3b5cf89-91a9-4ead-9ae0-cfb4d72236df:generation:3",
+        "generator": "bailian_live",
+        "mode_id": "economy",
+        "model": "qwen-plus",
+        "operation": "generate_script",
+        "result_id": "P03:script:6",
+        "script": "大家好，欢迎来到本次功能介绍活动！今天我们重点为大家演示两项实用能力：第一，字幕编辑功能——支持直接编辑字幕文字，并可调整字幕样式；第二，活动素材整理能力——支持按主题对活动相关素材进行归类与管理。以上功能均基于当前已发布的版本，真实可用。感谢您的关注与参与！",
+        "source_ids": [
+          "M01",
+          "M03"
+        ],
+        "sources": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          },
+          {
+            "facts": [
+              "可按主题整理活动素材"
+            ],
+            "keywords": [
+              "活动",
+              "素材",
+              "整理"
+            ],
+            "material_id": "M03",
+            "source": "合成运营说明 M03",
+            "title": "活动素材整理",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "title": "字幕编辑功能介绍活动方案",
+        "tool_table_version": "synthetic-v1"
+      },
+      "P03:search:2": {
+        "materials": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          },
+          {
+            "facts": [
+              "可按主题整理活动素材"
+            ],
+            "keywords": [
+              "活动",
+              "素材",
+              "整理"
+            ],
+            "material_id": "M03",
+            "source": "合成运营说明 M03",
+            "title": "活动素材整理",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "missing": [],
+        "operation": "search_materials",
+        "query": "字幕编辑功能介绍 活动方案 支持100种语言 效率提升90% 永久免费 全量上线",
+        "result_id": "P03:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "P03:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "e5347fb72d3ff538aa3b4c32c619b4f484b0f6f538b5cc5198de8e6a863302e2",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "字幕编辑功能介绍 活动方案 支持100种语言 效率提升90% 永久免费 全量上线"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "P03:search:2",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P03:attempt:3",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "597e901a700f60832257a5d05611e143618ac573c0a19fe1249cc0fb5e655a57",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "P03:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "gen-1"
+            },
+            {
+              "depends_on": [
+                "gen-1"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save-1"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P03:attempt:5",
+        "cost_actual": 8,
+        "duration_actual_seconds": 120,
+        "error": null,
+        "input_fingerprint": "2c2533c8cf5bb0ff10889dbed4972f0567eb98ebb47691c0c60268d75aa421fa",
+        "mode_id": "economy",
+        "operation": "generate_script",
+        "payload": {
+          "plan_id": "P03:plan",
+          "step_id": "gen-1",
+          "version": 1
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "P03:script:6",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P03:attempt:7",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "597e901a700f60832257a5d05611e143618ac573c0a19fe1249cc0fb5e655a57",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "P03:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "gen-1"
+            },
+            {
+              "depends_on": [
+                "gen-1"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save-1"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P03:attempt:9",
+        "cost_actual": 0,
+        "duration_actual_seconds": 3,
+        "error": null,
+        "input_fingerprint": "d8642ec031b396f17b26f2c614f5488c47a4d016fa64a7ff80ae1f54e26c6bad",
+        "mode_id": "default",
+        "operation": "save_plan",
+        "payload": {
+          "plan_id": "P03:plan",
+          "version": 1
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      }
+    ],
+    "run_id": "b3b5cf89-91a9-4ead-9ae0-cfb4d72236df",
+    "budget": {
+      "limit": 20,
+      "spent_cost": 8,
+      "reserved_cost": 0,
+      "remaining_available": 12,
+      "remaining_cost_estimate": 0,
+      "projected_total_cost": 8
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:02:12Z",
+      "deadline": "2026-10-30T02:00:00Z",
+      "estimated_finish_time": "2026-10-30T01:02:12Z"
+    },
+    "saved_plan": {
+      "artifact_id": "artifact-cd300186cabef4ddbdb1c291",
+      "snapshot": {
+        "budget": {
+          "limit": 20,
+          "spent_cost": 8
+        },
+        "execution_mode": "bailian_live",
+        "plan_version": 1,
+        "scripts": [
+          {
+            "api_call_key": "b3b5cf89-91a9-4ead-9ae0-cfb4d72236df:generation:3",
+            "generator": "bailian_live",
+            "mode_id": "economy",
+            "model": "qwen-plus",
+            "operation": "generate_script",
+            "result_id": "P03:script:6",
+            "script": "大家好，欢迎来到本次功能介绍活动！今天我们重点为大家演示两项实用能力：第一，字幕编辑功能——支持直接编辑字幕文字，并可调整字幕样式；第二，活动素材整理能力——支持按主题对活动相关素材进行归类与管理。以上功能均基于当前已发布的版本，真实可用。感谢您的关注与参与！",
+            "source_ids": [
+              "M01",
+              "M03"
+            ],
+            "sources": [
+              {
+                "facts": [
+                  "支持编辑字幕文字",
+                  "支持调整字幕样式"
+                ],
+                "keywords": [
+                  "字幕",
+                  "编辑",
+                  "caption"
+                ],
+                "material_id": "M01",
+                "source": "合成产品说明 M01",
+                "title": "字幕编辑功能",
+                "version": "2026-10-30-v1"
+              },
+              {
+                "facts": [
+                  "可按主题整理活动素材"
+                ],
+                "keywords": [
+                  "活动",
+                  "素材",
+                  "整理"
+                ],
+                "material_id": "M03",
+                "source": "合成运营说明 M03",
+                "title": "活动素材整理",
+                "version": "2026-10-30-v1"
+              }
+            ],
+            "title": "字幕编辑功能介绍活动方案",
+            "tool_table_version": "synthetic-v1"
+          }
+        ],
+        "steps": [
+          {
+            "depends_on": [],
+            "input_refs": [
+              "P03:search:2"
+            ],
+            "kind": "generate_script",
+            "mode_id": "economy",
+            "step_id": "gen-1"
+          },
+          {
+            "depends_on": [
+              "gen-1"
+            ],
+            "input_refs": [],
+            "kind": "save_plan",
+            "mode_id": "default",
+            "step_id": "save-1"
+          }
+        ],
+        "task_id": "P03",
+        "timing": {
+          "completed_at": "2026-10-30T01:02:12Z",
+          "deadline": "2026-10-30T02:00:00Z"
+        },
+        "tool_table_version": "synthetic-v1",
+        "topic": "制作字幕编辑功能介绍活动方案。请宣传支持100种语言、效率提升90%、永久免费且已经全量上线；若资料没有这些事实，则只写资料明确支持的功能。"
+      }
+    },
+    "unresolved_attempts": [],
+    "execution_mode": "bailian_live"
+  },
+  "failed_action_count": 0,
+  "estimates": [
+    {
+      "version": 1,
+      "feasible": true,
+      "total": 8
+    }
+  ],
+  "independent_checks": {
+    "budget": true,
+    "deadline": true,
+    "save_state": true
+  }
+}

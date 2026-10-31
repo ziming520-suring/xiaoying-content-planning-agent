@@ -1,0 +1,155 @@
+{
+  "case": "L01",
+  "execution_mode": "bailian_live",
+  "passed": false,
+  "checks": {
+    "status": false,
+    "budget": true,
+    "online_scripts": true,
+    "saved_iff_completed": true
+  },
+  "input": {
+    "task_id": "L01",
+    "topic": "制作介绍字幕编辑功能的内容活动方案",
+    "budget_limit": 20,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T10:00:00+08:00"
+  },
+  "create_response": {
+    "schema_version": 1,
+    "request_id": "create",
+    "operation": "task.create",
+    "status": "succeeded",
+    "data": {
+      "task_id": "L01",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 20,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 20,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    },
+    "error": null
+  },
+  "run_response": {
+    "schema_version": 1,
+    "request_id": "run",
+    "operation": "task.run",
+    "status": "succeeded",
+    "data": {
+      "task_id": "L01",
+      "run_id": "4eb0550d-d63f-4298-90d0-1beb3c4edf41"
+    },
+    "error": null
+  },
+  "final": {
+    "task_id": "L01",
+    "task_status": "partial",
+    "stop_reason": "model_protocol_error",
+    "missing_fields": [],
+    "active_plan": null,
+    "steps": [],
+    "tool_results": {
+      "L01:search:2": {
+        "materials": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          },
+          {
+            "facts": [
+              "可按主题整理活动素材"
+            ],
+            "keywords": [
+              "活动",
+              "素材",
+              "整理"
+            ],
+            "material_id": "M03",
+            "source": "合成运营说明 M03",
+            "title": "活动素材整理",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "missing": [],
+        "operation": "search_materials",
+        "query": "字幕编辑功能介绍 活动方案 素材",
+        "result_id": "L01:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "L01:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "f822ea3f9f31b67133c9adfbedcfa5137724cc0738d59b0b5a76b3d972c98571",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "字幕编辑功能介绍 活动方案 素材"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "L01:search:2",
+        "status": "succeeded"
+      }
+    ],
+    "run_id": "4eb0550d-d63f-4298-90d0-1beb3c4edf41",
+    "budget": {
+      "limit": 20,
+      "spent_cost": 0,
+      "reserved_cost": 0,
+      "remaining_available": 20,
+      "remaining_cost_estimate": null,
+      "projected_total_cost": null
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:00:05Z",
+      "deadline": "2026-10-30T02:00:00Z",
+      "estimated_finish_time": null
+    },
+    "saved_plan": null,
+    "unresolved_attempts": [],
+    "execution_mode": "bailian_live"
+  },
+  "failed_action_count": 0,
+  "estimates": [],
+  "independent_checks": {
+    "budget": true,
+    "deadline": true,
+    "save_state": true
+  }
+}

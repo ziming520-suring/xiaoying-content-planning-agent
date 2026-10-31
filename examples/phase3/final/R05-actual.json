@@ -1,0 +1,723 @@
+{
+  "case": "R05",
+  "execution_mode": "offline_mock",
+  "passed": true,
+  "checks": {
+    "limited_run_stopped": true,
+    "expected_status": true,
+    "expected_spent": true,
+    "fresh_reader_same_result": true,
+    "saved_iff_completed": true
+  },
+  "commands": [
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "create",
+        "operation": "task.create",
+        "payload": {
+          "task_id": "R05",
+          "topic": "字幕",
+          "budget_limit": 10,
+          "start_time": "2026-10-30T09:00:00+08:00",
+          "deadline": "2026-10-30T10:00:00+08:00"
+        }
+      },
+      "response": {
+        "schema_version": 1,
+        "request_id": "create",
+        "operation": "task.create",
+        "status": "succeeded",
+        "data": {
+          "task_id": "R05",
+          "task_status": "ready",
+          "stop_reason": null,
+          "missing_fields": [],
+          "active_plan": null,
+          "steps": [],
+          "tool_results": {},
+          "attempts": [],
+          "run_id": null,
+          "budget": {
+            "limit": 10,
+            "spent_cost": 0,
+            "reserved_cost": 0,
+            "remaining_available": 10,
+            "remaining_cost_estimate": null,
+            "projected_total_cost": null
+          },
+          "timing": {
+            "start_time": "2026-10-30T01:00:00Z",
+            "current_time": "2026-10-30T01:00:00Z",
+            "deadline": "2026-10-30T02:00:00Z",
+            "estimated_finish_time": null
+          },
+          "saved_plan": null,
+          "unresolved_attempts": [],
+          "execution_mode": "offline_mock"
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "run",
+        "operation": "task.run",
+        "payload": {
+          "task_id": "R05",
+          "max_actions": 3
+        }
+      },
+      "response": {
+        "schema_version": 1,
+        "request_id": "run",
+        "operation": "task.run",
+        "status": "succeeded",
+        "data": {
+          "task_id": "R05",
+          "run_id": "51e92acb-9d0d-4242-a002-c8d8e60ce93b"
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "resume",
+        "operation": "task.resume",
+        "payload": {
+          "task_id": "R05"
+        }
+      },
+      "response": {
+        "schema_version": 1,
+        "request_id": "resume",
+        "operation": "task.resume",
+        "status": "succeeded",
+        "data": {
+          "task_id": "R05",
+          "run_id": "16ec861f-a759-4cf0-b201-a2cfd6927fcc"
+        },
+        "error": null
+      }
+    }
+  ],
+  "intermediate": [
+    {
+      "task_id": "R05",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 10,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 10,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    },
+    {
+      "task_id": "R05",
+      "task_status": "partial",
+      "stop_reason": "step_limit",
+      "missing_fields": [],
+      "active_plan": {
+        "plan_id": "R05:plan",
+        "plan_version": 2,
+        "steps": [
+          {
+            "depends_on": [],
+            "input_refs": [
+              "R05:search:2"
+            ],
+            "kind": "generate_script",
+            "mode_id": "economy",
+            "step_id": "generate"
+          },
+          {
+            "depends_on": [
+              "generate"
+            ],
+            "input_refs": [],
+            "kind": "save_plan",
+            "mode_id": "default",
+            "step_id": "save"
+          }
+        ],
+        "estimate": {
+          "feasible": true,
+          "gaps": [],
+          "steps": [
+            {
+              "step_id": "generate",
+              "reused": false,
+              "cost": 8,
+              "seconds": 120
+            },
+            {
+              "step_id": "save",
+              "reused": false,
+              "cost": 0,
+              "seconds": 3
+            }
+          ],
+          "remaining_cost_estimate": 8,
+          "projected_total_cost": 8,
+          "estimated_finish_time": "2026-10-30T01:02:14Z",
+          "final_estimate_pending": true
+        }
+      },
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "R05:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "economy",
+          "step_id": "generate",
+          "status": "pending",
+          "attempt_ids": []
+        },
+        {
+          "depends_on": [
+            "generate"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "save",
+          "status": "blocked",
+          "attempt_ids": []
+        }
+      ],
+      "tool_results": {
+        "R05:search:2": {
+          "materials": [
+            {
+              "facts": [
+                "支持编辑字幕文字",
+                "支持调整字幕样式"
+              ],
+              "keywords": [
+                "字幕",
+                "编辑",
+                "caption"
+              ],
+              "material_id": "M01",
+              "source": "合成产品说明 M01",
+              "title": "字幕编辑功能",
+              "version": "2026-10-30-v1"
+            }
+          ],
+          "missing": [],
+          "operation": "search_materials",
+          "query": "字幕",
+          "result_id": "R05:search:2",
+          "tool_table_version": "synthetic-v1"
+        }
+      },
+      "attempts": [
+        {
+          "attempt_id": "R05:attempt:1",
+          "cost_actual": 0,
+          "duration_actual_seconds": 5,
+          "error": null,
+          "input_fingerprint": "ef0bdf512c8bc9147e2dcdd45c64bb701b4a06bac24c0e65d57a0b8ab95a9387",
+          "mode_id": "default",
+          "operation": "search_materials",
+          "payload": {
+            "query": "字幕"
+          },
+          "reserved_cost": 0,
+          "reserved_seconds": 0,
+          "result_id": "R05:search:2",
+          "status": "succeeded"
+        },
+        {
+          "attempt_id": "R05:attempt:3",
+          "cost_actual": 0,
+          "duration_actual_seconds": 2,
+          "error": null,
+          "input_fingerprint": "5da5e8434bb9661f6fe6f7f83951880357ed28a24f759ced8914c7f430fd9906",
+          "mode_id": "default",
+          "operation": "estimate_plan",
+          "payload": {
+            "steps": [
+              {
+                "depends_on": [],
+                "input_refs": [
+                  "R05:search:2"
+                ],
+                "kind": "generate_script",
+                "mode_id": "premium",
+                "step_id": "generate"
+              },
+              {
+                "depends_on": [
+                  "generate"
+                ],
+                "input_refs": [],
+                "kind": "save_plan",
+                "mode_id": "default",
+                "step_id": "save"
+              }
+            ]
+          },
+          "reserved_cost": 0,
+          "reserved_seconds": 0,
+          "result_id": null,
+          "status": "succeeded"
+        },
+        {
+          "attempt_id": "R05:attempt:5",
+          "cost_actual": 0,
+          "duration_actual_seconds": 2,
+          "error": null,
+          "input_fingerprint": "5c88dbf4bd437fc0bd5a07f2061ebca7524b01ed5e7670362abffbb1f77c43c8",
+          "mode_id": "default",
+          "operation": "estimate_plan",
+          "payload": {
+            "steps": [
+              {
+                "depends_on": [],
+                "input_refs": [
+                  "R05:search:2"
+                ],
+                "kind": "generate_script",
+                "mode_id": "economy",
+                "step_id": "generate"
+              },
+              {
+                "depends_on": [
+                  "generate"
+                ],
+                "input_refs": [],
+                "kind": "save_plan",
+                "mode_id": "default",
+                "step_id": "save"
+              }
+            ]
+          },
+          "reserved_cost": 0,
+          "reserved_seconds": 0,
+          "result_id": null,
+          "status": "succeeded"
+        }
+      ],
+      "run_id": "51e92acb-9d0d-4242-a002-c8d8e60ce93b",
+      "budget": {
+        "limit": 10,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 10,
+        "remaining_cost_estimate": 8,
+        "projected_total_cost": 8
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:09Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": "2026-10-30T01:02:14Z"
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    }
+  ],
+  "final": {
+    "task_id": "R05",
+    "task_status": "completed",
+    "stop_reason": null,
+    "missing_fields": [],
+    "active_plan": {
+      "plan_id": "R05:plan",
+      "plan_version": 2,
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "R05:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "economy",
+          "step_id": "generate"
+        },
+        {
+          "depends_on": [
+            "generate"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "save"
+        }
+      ],
+      "estimate": {
+        "feasible": true,
+        "gaps": [],
+        "steps": [
+          {
+            "step_id": "generate",
+            "reused": true,
+            "cost": 0,
+            "seconds": 0
+          },
+          {
+            "step_id": "save",
+            "reused": true,
+            "cost": 0,
+            "seconds": 0
+          }
+        ],
+        "remaining_cost_estimate": 0,
+        "projected_total_cost": 8,
+        "estimated_finish_time": "2026-10-30T01:02:14Z",
+        "final_estimate_pending": false
+      }
+    },
+    "steps": [
+      {
+        "depends_on": [],
+        "input_refs": [
+          "R05:search:2"
+        ],
+        "kind": "generate_script",
+        "mode_id": "economy",
+        "step_id": "generate",
+        "status": "succeeded",
+        "attempt_ids": [
+          "R05:attempt:7"
+        ]
+      },
+      {
+        "depends_on": [
+          "generate"
+        ],
+        "input_refs": [],
+        "kind": "save_plan",
+        "mode_id": "default",
+        "step_id": "save",
+        "status": "succeeded",
+        "attempt_ids": [
+          "R05:attempt:11"
+        ]
+      }
+    ],
+    "tool_results": {
+      "R05:script:8": {
+        "generator": "offline_mock",
+        "mode_id": "economy",
+        "operation": "generate_script",
+        "result_id": "R05:script:8",
+        "script": "[M01] 支持编辑字幕文字\n[M01] 支持调整字幕样式",
+        "source_ids": [
+          "M01"
+        ],
+        "sources": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "title": "字幕",
+        "tool_table_version": "synthetic-v1"
+      },
+      "R05:search:2": {
+        "materials": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "missing": [],
+        "operation": "search_materials",
+        "query": "字幕",
+        "result_id": "R05:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "R05:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "ef0bdf512c8bc9147e2dcdd45c64bb701b4a06bac24c0e65d57a0b8ab95a9387",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "字幕"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "R05:search:2",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R05:attempt:3",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "5da5e8434bb9661f6fe6f7f83951880357ed28a24f759ced8914c7f430fd9906",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "R05:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "premium",
+              "step_id": "generate"
+            },
+            {
+              "depends_on": [
+                "generate"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R05:attempt:5",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "5c88dbf4bd437fc0bd5a07f2061ebca7524b01ed5e7670362abffbb1f77c43c8",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "R05:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "generate"
+            },
+            {
+              "depends_on": [
+                "generate"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R05:attempt:7",
+        "cost_actual": 8,
+        "duration_actual_seconds": 120,
+        "error": null,
+        "input_fingerprint": "dc83d5f8bb1b91fcb3adca658b5b8c227b1edb4de6bfbe445c5c0a3f289b088a",
+        "mode_id": "economy",
+        "operation": "generate_script",
+        "payload": {
+          "plan_id": "R05:plan",
+          "step_id": "generate",
+          "version": 2
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "R05:script:8",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R05:attempt:9",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "5c88dbf4bd437fc0bd5a07f2061ebca7524b01ed5e7670362abffbb1f77c43c8",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "R05:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "generate"
+            },
+            {
+              "depends_on": [
+                "generate"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "R05:attempt:11",
+        "cost_actual": 0,
+        "duration_actual_seconds": 3,
+        "error": null,
+        "input_fingerprint": "9c0b15eee3861b94dbbf0dc7b10435a7c24ee6b14d42f22d0e91234208da7219",
+        "mode_id": "default",
+        "operation": "save_plan",
+        "payload": {
+          "plan_id": "R05:plan",
+          "version": 2
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      }
+    ],
+    "run_id": "16ec861f-a759-4cf0-b201-a2cfd6927fcc",
+    "budget": {
+      "limit": 10,
+      "spent_cost": 8,
+      "reserved_cost": 0,
+      "remaining_available": 2,
+      "remaining_cost_estimate": 0,
+      "projected_total_cost": 8
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:02:14Z",
+      "deadline": "2026-10-30T02:00:00Z",
+      "estimated_finish_time": "2026-10-30T01:02:14Z"
+    },
+    "saved_plan": {
+      "artifact_id": "artifact-dfb0ef2483e3ee6d0288ece5",
+      "snapshot": {
+        "budget": {
+          "limit": 10,
+          "spent_cost": 8
+        },
+        "execution_mode": "offline_tool_workbench",
+        "plan_version": 2,
+        "scripts": [
+          {
+            "generator": "offline_mock",
+            "mode_id": "economy",
+            "operation": "generate_script",
+            "result_id": "R05:script:8",
+            "script": "[M01] 支持编辑字幕文字\n[M01] 支持调整字幕样式",
+            "source_ids": [
+              "M01"
+            ],
+            "sources": [
+              {
+                "facts": [
+                  "支持编辑字幕文字",
+                  "支持调整字幕样式"
+                ],
+                "keywords": [
+                  "字幕",
+                  "编辑",
+                  "caption"
+                ],
+                "material_id": "M01",
+                "source": "合成产品说明 M01",
+                "title": "字幕编辑功能",
+                "version": "2026-10-30-v1"
+              }
+            ],
+            "title": "字幕",
+            "tool_table_version": "synthetic-v1"
+          }
+        ],
+        "steps": [
+          {
+            "depends_on": [],
+            "input_refs": [
+              "R05:search:2"
+            ],
+            "kind": "generate_script",
+            "mode_id": "economy",
+            "step_id": "generate"
+          },
+          {
+            "depends_on": [
+              "generate"
+            ],
+            "input_refs": [],
+            "kind": "save_plan",
+            "mode_id": "default",
+            "step_id": "save"
+          }
+        ],
+        "task_id": "R05",
+        "timing": {
+          "completed_at": "2026-10-30T01:02:14Z",
+          "deadline": "2026-10-30T02:00:00Z"
+        },
+        "tool_table_version": "synthetic-v1",
+        "topic": "字幕"
+      }
+    },
+    "unresolved_attempts": [],
+    "execution_mode": "offline_mock"
+  }
+}

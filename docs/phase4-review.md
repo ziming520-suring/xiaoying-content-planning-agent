@@ -1,0 +1,9 @@
+# 第四阶段独立审阅
+
+审阅范围：API适配器、预算账本、remote两阶段流程、Runtime、数据库升级、工具、CLI及测试。审阅者只读代码、执行免费测试与临时故障探针，未调用真实API。
+
+审阅未发现P0/P1阻断问题。发现P2：reconcile返回partial/incomplete时仍以退出码0结束，与CLI契约不一致。新增test_reconcile_incomplete_exit_code先复现0与3不符，再修正为仅completed返回0，其余未完成返回3。
+
+审阅独立验证发送前崩溃、API响应已缓存而业务回执未写入的崩溃、缓存非法生成结果三条恢复路径；没有二次发送。正式测试新增前两条回归。网络位于写事务外、未知结果保留预留、项目独立预算及脚本来源标签经检查。
+
+另由主执行者发现choices=null时抛出未结构化TypeError，新增失败测试后修正为MODEL_PROTOCOL_ERROR并保留预留。修正后完整免费回归74项测试与10个场景通过，见examples/phase4/offline-final。

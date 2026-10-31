@@ -1,0 +1,279 @@
+{
+  "reviewer": "AI assistant, not candidate human review",
+  "scope": "Read title and script against attached sources.facts for every generated result in all 25 tasks.",
+  "rubric": "具体功能/UI选项、版本上线状态、定量收益或价格承诺须有facts支持；未支持则needs_revision。泛化宣传措辞另提示，不计为具体事实缺陷。本审阅不等于全面真实性认证。",
+  "scripts": [
+    {
+      "group": "baseline",
+      "case": "L01",
+      "result_id": "L01:script:6",
+      "evidence": "examples/phase4/live-final/L01-actual.json",
+      "text_sha256": "31a545e28c016e0523784bf3f21d97e89878b83058cace6e2b8b5213dc298492",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "baseline",
+      "case": "L02",
+      "result_id": "L02:script:8",
+      "evidence": "examples/phase4/live-final/L02-actual.json",
+      "text_sha256": "9192e1c28d473fedd16ce0b620fa53824c33fccda807792194022afb34010a2b",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "以上两项功能均已在当前版本中提供"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    },
+    {
+      "group": "baseline",
+      "case": "L03",
+      "result_id": "L03:script:8",
+      "evidence": "examples/phase4/live-final/L03-actual.json",
+      "text_sha256": "651262f7edcc171939a8e58c4fcf255695ecbbc664a3c8200498cc3f6121a76b",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "baseline",
+      "case": "L04",
+      "result_id": "L04:script:9",
+      "evidence": "examples/phase4/live-final/L04-actual.json",
+      "text_sha256": "d1cde612f538074b85492adad3cb9153e551c6fbe790323b6b41065234d9f7ea",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "baseline",
+      "case": "L07",
+      "result_id": "L07:script:6",
+      "evidence": "examples/phase4/live-final/L07-actual.json",
+      "text_sha256": "9a7ba676b393ef39fd93ac4e536dd5af6334be504d833ce254f8b3d9da112774",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "round2",
+      "case": "L01",
+      "result_id": "L01:script:6",
+      "evidence": "examples/phase5/live-evaluation/round2/L01-actual.json",
+      "text_sha256": "15bc42c64863ba235bcb302b37f09531c824f0b47ff3196fe00a2cb1c60620c5",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "以上功能均已在当前版本中提供"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    },
+    {
+      "group": "round2",
+      "case": "L02",
+      "result_id": "L02:script:8",
+      "evidence": "examples/phase5/live-evaluation/round2/L02-actual.json",
+      "text_sha256": "f84d3e789aef1580e5863e10a458abc2bc8bc03f5d7e58a850b5aecd2a8140ca",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "round2",
+      "case": "L03",
+      "result_id": "L03:script:8",
+      "evidence": "examples/phase5/live-evaluation/round2/L03-actual.json",
+      "text_sha256": "0922313ee3d96c191454da18d17a535b67eb02badfd652da0c93c72b8aaaf5f9",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "以上两项功能均已在当前版本中上线，可供实际使用"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    },
+    {
+      "group": "round2",
+      "case": "L04",
+      "result_id": "L04:script:9",
+      "evidence": "examples/phase5/live-evaluation/round2/L04-actual.json",
+      "text_sha256": "40e90f2a25bb17e707978c6acc3d8d5b922b482cf564cf4d39eedb41a606d65c",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "以上功能均已在当前版本中提供"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    },
+    {
+      "group": "round2",
+      "case": "L07",
+      "result_id": "L07:script:6",
+      "evidence": "examples/phase5/live-evaluation/round2/L07-actual.json",
+      "text_sha256": "1679f78a67840a8bfd823bdedd0869393f7211d07439a3e1a9b6f40040e440d7",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "round3",
+      "case": "L01",
+      "result_id": "L01:script:6",
+      "evidence": "examples/phase5/live-evaluation/round3/L01-actual.json",
+      "text_sha256": "49a890fb0fb32a74d43e43806bd2be7e95b2ef9d50a9dd4f445d822a1dfd323e",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "以上功能均已在当前版本中呈现"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    },
+    {
+      "group": "round3",
+      "case": "L02",
+      "result_id": "L02:script:8",
+      "evidence": "examples/phase5/live-evaluation/round3/L02-actual.json",
+      "text_sha256": "8763bbb003c1ed9358eea903f11a7a6ddd24fd15dcfaddb64800fad05d3c6f5c",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "round3",
+      "case": "L03",
+      "result_id": "L03:script:8",
+      "evidence": "examples/phase5/live-evaluation/round3/L03-actual.json",
+      "text_sha256": "4fdf9005762df1976c725a919d97698055a096e9fa80399ce613a79057ad2b0c",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "round3",
+      "case": "L04",
+      "result_id": "L04:script:9",
+      "evidence": "examples/phase5/live-evaluation/round3/L04-actual.json",
+      "text_sha256": "d1cde612f538074b85492adad3cb9153e551c6fbe790323b6b41065234d9f7ea",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [],
+      "factual_verdict": "no_specific_unsupported_claim_identified",
+      "note": "核心功能与facts一致；一般性的效率、清晰度、便利性措辞仅作宣传性推断，未当作已验证收益。"
+    },
+    {
+      "group": "round3",
+      "case": "L07",
+      "result_id": "L07:script:6",
+      "evidence": "examples/phase5/live-evaluation/round3/L07-actual.json",
+      "text_sha256": "ed84f0da890db08931e8a6c1f04fafe9f4fe98b811b009c31b08834e18f80815",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "匹配活动主题色调"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    },
+    {
+      "group": "perturbations",
+      "case": "P01",
+      "result_id": "P01:script:8",
+      "evidence": "examples/phase5/live-evaluation/perturbations/P01-actual.json",
+      "text_sha256": "4d8f41eec786daa5ea766d04030396ff0e2a4000e10d87e0bd5507e2fb3261cb",
+      "source_ids": [
+        "M01"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "在视频播放界面中，您可以选中任意一条字幕",
+        "包括字体呈现效果、排版位置及视觉属性等基础设置",
+        "以上操作均在统一编辑环境中完成"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    },
+    {
+      "group": "perturbations",
+      "case": "P03",
+      "result_id": "P03:script:6",
+      "evidence": "examples/phase5/live-evaluation/perturbations/P03-actual.json",
+      "text_sha256": "3bf73060ad4cb9276ef63b611e48f7b9b5dfc15460a1f67dd0afa0841ac7bf54",
+      "source_ids": [
+        "M01",
+        "M03"
+      ],
+      "on_topic": true,
+      "unsupported_quotes": [
+        "以上功能均基于当前已发布的版本，真实可用"
+      ],
+      "factual_verdict": "needs_revision",
+      "note": "facts未提供上线状态、具体UI或具体样式选项，引用ID正确也不能支持这些断言。"
+    }
+  ]
+}

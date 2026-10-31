@@ -1,0 +1,465 @@
+{
+  "case": "P01",
+  "execution_mode": "bailian_live",
+  "passed": true,
+  "checks": {
+    "status": true,
+    "budget": true,
+    "online_scripts": true,
+    "saved_iff_completed": true
+  },
+  "input": {
+    "task_id": "P01",
+    "topic": "请写一份向观众演示字幕文字修改和字幕样式调整的活动脚本，并保存方案。",
+    "budget_limit": 10,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T10:00:00+08:00"
+  },
+  "create_response": {
+    "schema_version": 1,
+    "request_id": "create",
+    "operation": "task.create",
+    "status": "succeeded",
+    "data": {
+      "task_id": "P01",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 10,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 10,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T02:00:00Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    },
+    "error": null
+  },
+  "run_response": {
+    "schema_version": 1,
+    "request_id": "run",
+    "operation": "task.run",
+    "status": "succeeded",
+    "data": {
+      "task_id": "P01",
+      "run_id": "79da5864-5258-4bd4-aaa1-47a703d3c961"
+    },
+    "error": null
+  },
+  "final": {
+    "task_id": "P01",
+    "task_status": "completed",
+    "stop_reason": null,
+    "missing_fields": [],
+    "active_plan": {
+      "plan_id": "P01:plan",
+      "plan_version": 2,
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "P01:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "economy",
+          "step_id": "gen-001"
+        },
+        {
+          "depends_on": [
+            "gen-001"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "save-001"
+        }
+      ],
+      "estimate": {
+        "feasible": true,
+        "gaps": [],
+        "steps": [
+          {
+            "step_id": "gen-001",
+            "reused": true,
+            "cost": 0,
+            "seconds": 0
+          },
+          {
+            "step_id": "save-001",
+            "reused": true,
+            "cost": 0,
+            "seconds": 0
+          }
+        ],
+        "remaining_cost_estimate": 0,
+        "projected_total_cost": 8,
+        "estimated_finish_time": "2026-10-30T01:02:14Z",
+        "final_estimate_pending": false
+      }
+    },
+    "steps": [
+      {
+        "depends_on": [],
+        "input_refs": [
+          "P01:search:2"
+        ],
+        "kind": "generate_script",
+        "mode_id": "economy",
+        "step_id": "gen-001",
+        "status": "succeeded",
+        "attempt_ids": [
+          "P01:attempt:7"
+        ]
+      },
+      {
+        "depends_on": [
+          "gen-001"
+        ],
+        "input_refs": [],
+        "kind": "save_plan",
+        "mode_id": "default",
+        "step_id": "save-001",
+        "status": "succeeded",
+        "attempt_ids": [
+          "P01:attempt:11"
+        ]
+      }
+    ],
+    "tool_results": {
+      "P01:script:8": {
+        "api_call_key": "79da5864-5258-4bd4-aaa1-47a703d3c961:generation:4",
+        "generator": "bailian_live",
+        "mode_id": "economy",
+        "model": "qwen-plus",
+        "operation": "generate_script",
+        "result_id": "P01:script:8",
+        "script": "大家好，欢迎来到本次功能演示环节。接下来，我们将为您展示字幕编辑功能的两个核心操作：字幕文字修改与字幕样式调整。\n\n首先，在视频播放界面中，您可以选中任意一条字幕，直接编辑其文字内容——例如更正错别字、优化表达或适配不同语言场景。\n\n接着，您可对已选字幕进行样式调整，包括字体呈现效果、排版位置及视觉属性等基础设置，以满足个性化呈现需求。\n\n以上操作均在统一编辑环境中完成，便于您高效完成字幕制作与优化。感谢您的关注！",
+        "source_ids": [
+          "M01"
+        ],
+        "sources": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "title": "字幕编辑功能演示脚本",
+        "tool_table_version": "synthetic-v1"
+      },
+      "P01:search:2": {
+        "materials": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "missing": [],
+        "operation": "search_materials",
+        "query": "字幕文字修改 字幕样式调整 教学脚本",
+        "result_id": "P01:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "P01:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "a84e6c6f7bbd79d9d04206e567e28bd7bb3dfaa165bb892cf27bd01358701dcb",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "字幕文字修改 字幕样式调整 教学脚本"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "P01:search:2",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P01:attempt:3",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "f457721ede96b213728b5a4f6080c79bd152d2e7c1411eed5c50b8af04315b81",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "P01:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "premium",
+              "step_id": "gen-001"
+            },
+            {
+              "depends_on": [
+                "gen-001"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save-001"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P01:attempt:5",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "f68d92ebfce139097110d021346daa8907407e720f0c515f556a846027f5563b",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "P01:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "gen-001"
+            },
+            {
+              "depends_on": [
+                "gen-001"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save-001"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P01:attempt:7",
+        "cost_actual": 8,
+        "duration_actual_seconds": 120,
+        "error": null,
+        "input_fingerprint": "9090b7d3c901e32ec890e9e4adbac5002106aa8e032fff522e530d262b268ffb",
+        "mode_id": "economy",
+        "operation": "generate_script",
+        "payload": {
+          "plan_id": "P01:plan",
+          "step_id": "gen-001",
+          "version": 2
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "P01:script:8",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P01:attempt:9",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "f68d92ebfce139097110d021346daa8907407e720f0c515f556a846027f5563b",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "P01:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "gen-001"
+            },
+            {
+              "depends_on": [
+                "gen-001"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save-001"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "P01:attempt:11",
+        "cost_actual": 0,
+        "duration_actual_seconds": 3,
+        "error": null,
+        "input_fingerprint": "21a4b4bae6eed28ff951ef2f3c9933794f3da495b2a58bd7f864cf0e56ef7646",
+        "mode_id": "default",
+        "operation": "save_plan",
+        "payload": {
+          "plan_id": "P01:plan",
+          "version": 2
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      }
+    ],
+    "run_id": "79da5864-5258-4bd4-aaa1-47a703d3c961",
+    "budget": {
+      "limit": 10,
+      "spent_cost": 8,
+      "reserved_cost": 0,
+      "remaining_available": 2,
+      "remaining_cost_estimate": 0,
+      "projected_total_cost": 8
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:02:14Z",
+      "deadline": "2026-10-30T02:00:00Z",
+      "estimated_finish_time": "2026-10-30T01:02:14Z"
+    },
+    "saved_plan": {
+      "artifact_id": "artifact-3cdb417645d2f9275a57d797",
+      "snapshot": {
+        "budget": {
+          "limit": 10,
+          "spent_cost": 8
+        },
+        "execution_mode": "bailian_live",
+        "plan_version": 2,
+        "scripts": [
+          {
+            "api_call_key": "79da5864-5258-4bd4-aaa1-47a703d3c961:generation:4",
+            "generator": "bailian_live",
+            "mode_id": "economy",
+            "model": "qwen-plus",
+            "operation": "generate_script",
+            "result_id": "P01:script:8",
+            "script": "大家好，欢迎来到本次功能演示环节。接下来，我们将为您展示字幕编辑功能的两个核心操作：字幕文字修改与字幕样式调整。\n\n首先，在视频播放界面中，您可以选中任意一条字幕，直接编辑其文字内容——例如更正错别字、优化表达或适配不同语言场景。\n\n接着，您可对已选字幕进行样式调整，包括字体呈现效果、排版位置及视觉属性等基础设置，以满足个性化呈现需求。\n\n以上操作均在统一编辑环境中完成，便于您高效完成字幕制作与优化。感谢您的关注！",
+            "source_ids": [
+              "M01"
+            ],
+            "sources": [
+              {
+                "facts": [
+                  "支持编辑字幕文字",
+                  "支持调整字幕样式"
+                ],
+                "keywords": [
+                  "字幕",
+                  "编辑",
+                  "caption"
+                ],
+                "material_id": "M01",
+                "source": "合成产品说明 M01",
+                "title": "字幕编辑功能",
+                "version": "2026-10-30-v1"
+              }
+            ],
+            "title": "字幕编辑功能演示脚本",
+            "tool_table_version": "synthetic-v1"
+          }
+        ],
+        "steps": [
+          {
+            "depends_on": [],
+            "input_refs": [
+              "P01:search:2"
+            ],
+            "kind": "generate_script",
+            "mode_id": "economy",
+            "step_id": "gen-001"
+          },
+          {
+            "depends_on": [
+              "gen-001"
+            ],
+            "input_refs": [],
+            "kind": "save_plan",
+            "mode_id": "default",
+            "step_id": "save-001"
+          }
+        ],
+        "task_id": "P01",
+        "timing": {
+          "completed_at": "2026-10-30T01:02:14Z",
+          "deadline": "2026-10-30T02:00:00Z"
+        },
+        "tool_table_version": "synthetic-v1",
+        "topic": "请写一份向观众演示字幕文字修改和字幕样式调整的活动脚本，并保存方案。"
+      }
+    },
+    "unresolved_attempts": [],
+    "execution_mode": "bailian_live"
+  },
+  "failed_action_count": 0,
+  "estimates": [
+    {
+      "version": 1,
+      "feasible": false,
+      "total": 12
+    },
+    {
+      "version": 2,
+      "feasible": true,
+      "total": 8
+    }
+  ],
+  "independent_checks": {
+    "budget": true,
+    "deadline": true,
+    "save_state": true
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "case": "L03",
+  "execution_mode": "bailian_live",
+  "passed": false,
+  "checks": {
+    "status": false,
+    "budget": true,
+    "online_scripts": true,
+    "saved_iff_completed": true,
+    "observed_infeasible_then_replanned": true
+  },
+  "input": {
+    "task_id": "L03",
+    "topic": "制作字幕编辑功能活动方案，先评估economy模式，不满足截止时间时考虑quick模式",
+    "budget_limit": 20,
+    "start_time": "2026-10-30T09:00:00+08:00",
+    "deadline": "2026-10-30T09:01:30+08:00"
+  },
+  "create_response": {
+    "schema_version": 1,
+    "request_id": "create",
+    "operation": "task.create",
+    "status": "succeeded",
+    "data": {
+      "task_id": "L03",
+      "task_status": "ready",
+      "stop_reason": null,
+      "missing_fields": [],
+      "active_plan": null,
+      "steps": [],
+      "tool_results": {},
+      "attempts": [],
+      "run_id": null,
+      "budget": {
+        "limit": 20,
+        "spent_cost": 0,
+        "reserved_cost": 0,
+        "remaining_available": 20,
+        "remaining_cost_estimate": null,
+        "projected_total_cost": null
+      },
+      "timing": {
+        "start_time": "2026-10-30T01:00:00Z",
+        "current_time": "2026-10-30T01:00:00Z",
+        "deadline": "2026-10-30T01:01:30Z",
+        "estimated_finish_time": null
+      },
+      "saved_plan": null,
+      "unresolved_attempts": [],
+      "execution_mode": "offline_mock"
+    },
+    "error": null
+  },
+  "run_response": {
+    "schema_version": 1,
+    "request_id": "run",
+    "operation": "task.run",
+    "status": "succeeded",
+    "data": {
+      "task_id": "L03",
+      "run_id": "14bd61af-5638-43d7-8e40-7a985e17bcd7"
+    },
+    "error": null
+  },
+  "final": {
+    "task_id": "L03",
+    "task_status": "partial",
+    "stop_reason": "generation_failed",
+    "missing_fields": [],
+    "active_plan": {
+      "plan_id": "L03:plan",
+      "plan_version": 2,
+      "steps": [
+        {
+          "depends_on": [],
+          "input_refs": [
+            "L03:search:2"
+          ],
+          "kind": "generate_script",
+          "mode_id": "quick",
+          "step_id": "gen_script_quick"
+        },
+        {
+          "depends_on": [
+            "gen_script_quick"
+          ],
+          "input_refs": [],
+          "kind": "save_plan",
+          "mode_id": "default",
+          "step_id": "save_final"
+        }
+      ],
+      "estimate": {
+        "feasible": false,
+        "gaps": [
+          {
+            "code": "DEADLINE_EXCEEDED",
+            "seconds": 4.0
+          }
+        ],
+        "steps": [
+          {
+            "step_id": "gen_script_quick",
+            "reused": false,
+            "cost": 9,
+            "seconds": 60
+          },
+          {
+            "step_id": "save_final",
+            "reused": false,
+            "cost": 0,
+            "seconds": 3
+          }
+        ],
+        "remaining_cost_estimate": 9,
+        "projected_total_cost": 12,
+        "estimated_finish_time": "2026-10-30T01:01:34Z",
+        "final_estimate_pending": true
+      }
+    },
+    "steps": [
+      {
+        "depends_on": [],
+        "input_refs": [
+          "L03:search:2"
+        ],
+        "kind": "generate_script",
+        "mode_id": "quick",
+        "step_id": "gen_script_quick",
+        "status": "failed",
+        "attempt_ids": [
+          "L03:attempt:7"
+        ]
+      },
+      {
+        "depends_on": [
+          "gen_script_quick"
+        ],
+        "input_refs": [],
+        "kind": "save_plan",
+        "mode_id": "default",
+        "step_id": "save_final",
+        "status": "blocked",
+        "attempt_ids": []
+      }
+    ],
+    "tool_results": {
+      "L03:search:2": {
+        "materials": [
+          {
+            "facts": [
+              "支持编辑字幕文字",
+              "支持调整字幕样式"
+            ],
+            "keywords": [
+              "字幕",
+              "编辑",
+              "caption"
+            ],
+            "material_id": "M01",
+            "source": "合成产品说明 M01",
+            "title": "字幕编辑功能",
+            "version": "2026-10-30-v1"
+          },
+          {
+            "facts": [
+              "可按主题整理活动素材"
+            ],
+            "keywords": [
+              "活动",
+              "素材",
+              "整理"
+            ],
+            "material_id": "M03",
+            "source": "合成运营说明 M03",
+            "title": "活动素材整理",
+            "version": "2026-10-30-v1"
+          }
+        ],
+        "missing": [],
+        "operation": "search_materials",
+        "query": "字幕编辑功能活动方案",
+        "result_id": "L03:search:2",
+        "tool_table_version": "synthetic-v1"
+      }
+    },
+    "attempts": [
+      {
+        "attempt_id": "L03:attempt:1",
+        "cost_actual": 0,
+        "duration_actual_seconds": 5,
+        "error": null,
+        "input_fingerprint": "3a32598db2f088a6981e2c30796aa9e7a5631fcdc2faf55f6c889c3f7f1d9ca5",
+        "mode_id": "default",
+        "operation": "search_materials",
+        "payload": {
+          "query": "字幕编辑功能活动方案"
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": "L03:search:2",
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "L03:attempt:3",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "be8b5cd921019c032c9f24cdb5ec6f09134bb8ce7eef6d5b652e3c774d34d906",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "L03:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "economy",
+              "step_id": "gen_script_economy"
+            },
+            {
+              "depends_on": [
+                "gen_script_economy"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save_final"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "L03:attempt:5",
+        "cost_actual": 0,
+        "duration_actual_seconds": 2,
+        "error": null,
+        "input_fingerprint": "4e219f11c5743990bc82ba95ca6a485d107226a7e71c371df6757796eb5e39fd",
+        "mode_id": "default",
+        "operation": "estimate_plan",
+        "payload": {
+          "steps": [
+            {
+              "depends_on": [],
+              "input_refs": [
+                "L03:search:2"
+              ],
+              "kind": "generate_script",
+              "mode_id": "quick",
+              "step_id": "gen_script_quick"
+            },
+            {
+              "depends_on": [
+                "gen_script_quick"
+              ],
+              "input_refs": [],
+              "kind": "save_plan",
+              "mode_id": "default",
+              "step_id": "save_final"
+            }
+          ]
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "succeeded"
+      },
+      {
+        "attempt_id": "L03:attempt:7",
+        "cost_actual": 3,
+        "duration_actual_seconds": 20,
+        "error": {
+          "code": "MODEL_GROUNDING_ERROR",
+          "message": "Remote generation did not produce a valid result"
+        },
+        "input_fingerprint": "6ebbcd75cbdefd154105447b0ba83fec7da7b13017742a8a1f75df36c773da48",
+        "mode_id": "quick",
+        "operation": "generate_script",
+        "payload": {
+          "plan_id": "L03:plan",
+          "step_id": "gen_script_quick",
+          "version": 2
+        },
+        "reserved_cost": 0,
+        "reserved_seconds": 0,
+        "result_id": null,
+        "status": "failed"
+      }
+    ],
+    "run_id": "14bd61af-5638-43d7-8e40-7a985e17bcd7",
+    "budget": {
+      "limit": 20,
+      "spent_cost": 3,
+      "reserved_cost": 0,
+      "remaining_available": 17,
+      "remaining_cost_estimate": 9,
+      "projected_total_cost": 12
+    },
+    "timing": {
+      "start_time": "2026-10-30T01:00:00Z",
+      "current_time": "2026-10-30T01:00:29Z",
+      "deadline": "2026-10-30T01:01:30Z",
+      "estimated_finish_time": "2026-10-30T01:01:34Z"
+    },
+    "saved_plan": null,
+    "unresolved_attempts": [],
+    "execution_mode": "bailian_live"
+  },
+  "failed_action_count": 1,
+  "estimates": [
+    {
+      "version": 1,
+      "feasible": false,
+      "total": 8
+    },
+    {
+      "version": 2,
+      "feasible": true,
+      "total": 9
+    }
+  ],
+  "independent_checks": {
+    "budget": true,
+    "deadline": true,
+    "save_state": true,
+    "replan_order": true
+  }
+}

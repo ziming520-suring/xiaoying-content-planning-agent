@@ -1,0 +1,9 @@
+{
+  "id": "R04",
+  "description": "预算无解",
+  "overrides": {
+    "budget_limit": 7
+  },
+  "expected_status": "partial",
+  "expected_spent": 0
+}

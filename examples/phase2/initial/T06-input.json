@@ -1,0 +1,27 @@
+{
+  "id": "T06",
+  "description": "预算不足且没有可行方案",
+  "task_overrides": {
+    "budget_limit": 7
+  },
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "failed"
+    ],
+    "spent_cost": 0,
+    "saved": false,
+    "last_error": "BUDGET_EXCEEDED"
+  }
+}

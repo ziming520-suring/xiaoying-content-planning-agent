@@ -1,0 +1,36 @@
+{
+  "id": "T07",
+  "description": "保存失败后保留脚本再保存",
+  "task_overrides": {},
+  "query": "字幕",
+  "actions": [
+    {
+      "op": "estimate",
+      "mode": "economy"
+    },
+    {
+      "op": "generate"
+    },
+    {
+      "op": "fail_next",
+      "tool": "save_plan"
+    },
+    {
+      "op": "save"
+    },
+    {
+      "op": "save"
+    }
+  ],
+  "expected": {
+    "statuses": [
+      "succeeded",
+      "succeeded",
+      "succeeded",
+      "failed",
+      "succeeded"
+    ],
+    "spent_cost": 8,
+    "saved": true
+  }
+}

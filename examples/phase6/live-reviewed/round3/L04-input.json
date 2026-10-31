@@ -1,0 +1,12 @@
+{
+  "id": "L04",
+  "description": "生成工具失败后调整或重试",
+  "topic": "制作介绍字幕编辑功能的内容活动方案",
+  "budget": 20,
+  "deadline": "2026-10-30T10:00:00+08:00",
+  "test_failures": {
+    "generate_script": 1
+  },
+  "expected_status": "completed",
+  "require_failure": true
+}

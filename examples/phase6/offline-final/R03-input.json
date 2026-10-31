@@ -1,0 +1,10 @@
+{
+  "id": "R03",
+  "description": "生成失败保留费用和素材",
+  "overrides": {},
+  "test_failures": {
+    "generate_script": 1
+  },
+  "expected_status": "partial",
+  "expected_spent": 3
+}

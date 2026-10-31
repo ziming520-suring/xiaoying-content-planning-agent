@@ -1,0 +1,14 @@
+{
+  "id": "R02",
+  "description": "缺预算和截止时间，补齐后执行",
+  "overrides": {
+    "budget_limit": null,
+    "deadline": null
+  },
+  "complete_input": {
+    "budget_limit": 10,
+    "deadline": "2026-10-30T10:00:00+08:00"
+  },
+  "expected_status": "completed",
+  "expected_spent": 8
+}

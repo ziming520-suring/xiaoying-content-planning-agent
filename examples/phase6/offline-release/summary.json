@@ -1,0 +1,90 @@
+{
+  "execution_mode": "offline_mock",
+  "tests_run": 92,
+  "tests_passed": true,
+  "scenario_count": 10,
+  "scenario_passed": 10,
+  "scenarios": [
+    {
+      "id": "R01",
+      "passed": true
+    },
+    {
+      "id": "R02",
+      "passed": true
+    },
+    {
+      "id": "R03",
+      "passed": true
+    },
+    {
+      "id": "R04",
+      "passed": true
+    },
+    {
+      "id": "R05",
+      "passed": true
+    },
+    {
+      "id": "R06",
+      "passed": true
+    },
+    {
+      "id": "R07",
+      "passed": true
+    },
+    {
+      "id": "R08",
+      "passed": true
+    },
+    {
+      "id": "R09",
+      "passed": true
+    },
+    {
+      "id": "R10",
+      "passed": true
+    }
+  ],
+  "source_unchanged": true,
+  "source_sha256": {
+    "data/live_scenarios.json": "8cc1ec720a75cc047685c0eae8510673f5a1159038865e4aa69cd45c526a9b74",
+    "data/materials.json": "e536aa02abcab95f8f0f81c516239437a8a0399d69655ed2290b7b172ce4ba17",
+    "data/phase5_perturbations.json": "a892393ad3f1920f9efdb1e1cef0c61c3236e3f3bba118bdcfc9a15e3148b640",
+    "data/runtime_scenarios.json": "5058c2bf3744fdf80b8bb64faf37ac9315683137d8b9dd2c75ff4b6e3bba781c",
+    "data/scenarios.json": "6abc01c338d55e7d0f3771809f9dd7a140fe770edbda092e2d26731ff67734dd",
+    "data/tool_costs.json": "1075d564bd272d5a5b95d11e5a8500f8a59a8d9b7b79be904be9448ebd0e839d",
+    "run_demo.py": "f2f85864bb89474177974d4148774c1c7da17cc0143b860d6aae82eb7c44e0b9",
+    "run_tools_demo.py": "190897dbbd704807faa8971804c0d9e0f30a99097f262ec7a7d6c8a21753036d",
+    "src/content_planner/__init__.py": "fd917a671bb34ea32d4e38c07a636fbcf772fec2243a6d756a584b45e037884e",
+    "src/content_planner/__main__.py": "0cbaa12ac486d63ae0c947af3edb97bef5a942e6c4f8079db008a80aa5b4a9ac",
+    "src/content_planner/api_budget.py": "d38eaef34ee052c7d45074ca825c2d41c8b7a8895652a5e1dbd470ed13f4dc7a",
+    "src/content_planner/artifacts.py": "0958a7ecd60a1e28b51cab931a909b01d791392fdcaadbd6178db5990d8b140f",
+    "src/content_planner/bailian.py": "9936152b1fc98d300c7e423cff3cb8b562983944ece7bec160a02edfebf07626",
+    "src/content_planner/catalog.py": "9ddb539bff7bfabfa3f1d5c6dfed248558a51c839327a49f81e7392028fb54c4",
+    "src/content_planner/contracts.py": "1bbaabb3bae67cda83f539b7725f2212fc4962d70a26b0891c73a23d970e82f9",
+    "src/content_planner/database.py": "0dd7a849db1d6ab5174a359adb1195709be5da2e778b4f1c9fc8b9441726bfe7",
+    "src/content_planner/grounding.py": "038f12463fa8a045134a2cb0f03d8ee4409e72a9c3d7504c583c4283f0e3693e",
+    "src/content_planner/locking.py": "b91a0051fa03ad5a54a23ad3c8eadb635892deebb9f0f2d2fbac21f5ec042972",
+    "src/content_planner/offline.py": "72285c82ea3e447b3e98c8fa6a3df00d5d585be2d31696cce6d9578bb8c62ec2",
+    "src/content_planner/remote.py": "391829371b3b6fd1e4806648ae29af30b2847fcb57ab56a3900e079bbd9cf07d",
+    "src/content_planner/runtime.py": "30cdc5068853f47226cfcfeea01315669cd7836d23ddf40f270b5a01a0251cf3",
+    "src/content_planner/state.py": "544f32eedae17f6bd5e85b63ebe759c6e90a3f49ef9812a8a64d9d0735d614f9",
+    "src/content_planner/tools.py": "438d010dbd36dc009d25f0aad016e279c1d8ea729c9f597f2a401228de771eba",
+    "tests/phase5_metrics.py": "c483c2b5eb53e0a86f7d238e0982ca0f1c92e62c97b5345fb2b26431758d059c",
+    "tests/record_live.py": "5ec76d90d07e765b52a87b5592453c584a69b2ffc671277d2d665b67634b9396",
+    "tests/record_phase2.py": "69ddbe75ea7790e5801f965ac8ca4b8ff10fd4a4356c23e03a67e0de4784f9a7",
+    "tests/record_phase3.py": "c661731bbd489399efdc645e923413575a52a7585873f7ff3f3bfe50ddbef90f",
+    "tests/record_phase5.py": "ae56f9a08a33e5ae002c54d3f98a42cc7d7fb8adfcdea8635aeffbcf1a3528ad",
+    "tests/runtime_worker.py": "0ada21726ff2fcb0122c79c9a1ff4b7606924183c78fd3d04b529197f58e29ed",
+    "tests/test_bailian.py": "7762b93b9b9f72d1812f00db8be9a0836ee02e796bbcae3864e62e8b06243b68",
+    "tests/test_catalog.py": "42454b06aac70cc841c06da5df4fc64cb49163b823985666613ef9fb097552d7",
+    "tests/test_cli.py": "2459a8b8fd97c6e73c7c45aa6aba1020bd9e6bcaf1bd50cb16e601825a2911ad",
+    "tests/test_evaluation.py": "ae9d88a1ee38bc5905a3362a93c025a5db83e43d0231daa4785194aef4b12127",
+    "tests/test_grounding.py": "e583495ca1cca277911c00b78f1cef7facc63f0b40cfa5b27c76e2bee9b44a9e",
+    "tests/test_live_runtime.py": "ccd4d872dcd7cc00522ff69704fc48726a3b5743fd9371626b5e9b0e80f1158d",
+    "tests/test_runtime.py": "a1ad6fba1f557a8cbb6bdf43070b3ab1ccecf498f24b773ba42733f884d071fb",
+    "tests/test_tools.py": "2c519e4b8fe69f6b5df4653f819a4b71b9a82d30ee38f70b590573ad4f5f2a37"
+  },
+  "real_model_calls": 0
+}

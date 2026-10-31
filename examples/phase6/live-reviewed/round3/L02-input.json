@@ -1,0 +1,9 @@
+{
+  "id": "L02",
+  "description": "超预算后降配",
+  "topic": "制作字幕编辑功能活动方案，优先评估premium模式，不满足预算时再考虑低成本模式",
+  "budget": 10,
+  "deadline": "2026-10-30T10:00:00+08:00",
+  "expected_status": "completed",
+  "require_replan": true
+}

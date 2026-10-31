@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "request_id": "example-run",
+  "operation": "task.run",
+  "payload": {"task_id": "EXAMPLE", "max_actions": 24}
+}

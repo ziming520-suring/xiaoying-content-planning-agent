@@ -1,0 +1,9 @@
+{
+  "id": "L03",
+  "description": "截止时间不足改选快速模式",
+  "topic": "制作字幕编辑功能活动方案，先评估economy模式，不满足截止时间时考虑quick模式",
+  "budget": 20,
+  "deadline": "2026-10-30T09:01:30+08:00",
+  "expected_status": "completed",
+  "require_replan": true
+}
